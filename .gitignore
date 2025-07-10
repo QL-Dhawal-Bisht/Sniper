@@ -1,3 +1,6 @@
 node_modules/
 .env
 dev.js
+data_preprocessing/venv/
+raw
+deepscrape
