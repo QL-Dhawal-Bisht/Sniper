@@ -1,0 +1,20 @@
+{
+  "name": "ql-sales",
+  "version": "1.0.0",
+  "description": " ",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start",
+    "dev": "npm start",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.1.0",
+    "openai": "^5.8.3"
+  }
+}
