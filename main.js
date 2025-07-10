@@ -74,6 +74,8 @@ class LeadGenerator {
       fs.writeFileSync(path.join(rawDir, `results_${safe}.txt`), found.map(r => `${r.title}\n${r.url}\n${r.snippet}`).join('\n\n'));
       results.push(...found);
     }
+
+    console.log("results", results);
     return results;
   }
 
