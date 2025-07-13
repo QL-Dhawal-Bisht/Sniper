@@ -2,15 +2,16 @@
 # Lead Generation Campaign Report
 
 ## Campaign Configuration
-- **Business Type**: b2b saas
-- **Services Offered**: web dev, mobile dev
+- **Business Type**: b2b
+- **Services Offered**: web dev
 - **Target Audience**: Early-stage startups
 - **Selected Platforms**: linkedin, crunchbase, clutch, ycombinator, indiehackers, angellist
-- **Generated**: 2025-07-10T12:03:28.894Z
+- **Generated**: 2025-07-12T08:12:16.260Z
 
 ## Results Summary
-- **Total Results Collected**: 72
+- **Total Results Collected**: 130
 - **Platforms Targeted**: 6
+- **Parallel Tabs Used**: 10
 - **Files Generated**: Check 'raw' and 'deepscrape' directories
 
 ## Next Steps

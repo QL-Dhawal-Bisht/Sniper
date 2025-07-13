@@ -15,7 +15,10 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.1.0",
+    "groq-sdk": "^0.26.0",
+    "json2csv": "^6.0.0-alpha.2",
     "openai": "^5.8.3",
+    "p-limit": "^6.2.0",
     "playwright": "^1.53.2"
   }
 }

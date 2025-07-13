@@ -7,11 +7,11 @@ import phonenumbers
 from phonenumbers import geocoder, carrier
 from urllib.parse import urlparse
 
-os.chdir('../deepscrape')
+os.chdir('../cleaned_data')
 
 # Load spaCy model with better configuration
 try:
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load("en_core_web_lg")
     # Disable unnecessary components for speed
     nlp.disable_pipes(["tagger", "parser", "attribute_ruler", "lemmatizer"])
 except OSError:
