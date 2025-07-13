@@ -1,0 +1,79 @@
+{
+  "source": {
+    "title": "Keyar Srinivasan - Chief Technology Officer - O Clock ...",
+    "url": "https://in.linkedin.com/in/keyar",
+    "snippet": "... (CTO) at OClock Software Pvt Ltd, with over 24 years of experience in ... Mobile App Development: Expertise in Flutter, React Native, SwiftUI, and ..."
+  },
+  "leadInfo": {
+    "company": "LinkedIn",
+    "contact_info": {
+      "emails": [],
+      "phones": [],
+      "website": "http://www.w3.org/2000/svg",
+      "linkedin": "https://in.linkedin.com/in/keyar",
+      "social": []
+    },
+    "key_people": [
+      {
+        "name": "Keyar",
+        "title": "Professional (LinkedIn Profile)",
+        "email": null,
+        "linkedin": "https://in.linkedin.com/in/keyar"
+      }
+    ],
+    "business_info": {
+      "industry": "Technology/Software Development",
+      "size": "Small to Medium (Startup)",
+      "location": "Not specified (assumed to be India based on LinkedIn URL)",
+      "funding": "Not specified",
+      "stage": "startup"
+    },
+    "pain_points": [
+      "Need for web development and mobile development services"
+    ],
+    "buying_signals": [
+      "Looking for web dev and mobile dev solutions"
+    ],
+    "lead_score": 6,
+    "pitch_angle": "Offer tailored web and mobile development solutions to enhance their startup's digital presence.",
+    "raw_data": {
+      "platform": "linkedin",
+      "title": "LinkedIn",
+      "meta": {
+        "description": "",
+        "keywords": ""
+      },
+      "all_emails": [],
+      "all_phones": [],
+      "all_linkedin": [],
+      "all_websites": [
+        "http://www.w3.org/2000/svg\""
+      ],
+      "scraped_at": "2025-07-13T10:28:46.369Z"
+    }
+  },
+  "scrapedData": {
+    "content": "",
+    "emails": [],
+    "phones": [],
+    "linkedinUrls": [],
+    "websites": [
+      "http://www.w3.org/2000/svg\""
+    ],
+    "people": [],
+    "platformData": {
+      "type": "linkedin",
+      "companyName": "",
+      "followers": "",
+      "industry": "",
+      "description": ""
+    },
+    "title": "LinkedIn",
+    "meta": {
+      "description": "",
+      "keywords": ""
+    }
+  },
+  "score": 4,
+  "reason": "Fallback selection - company/profile page detected"
+}

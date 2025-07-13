@@ -1,0 +1,81 @@
+{
+  "source": {
+    "title": "Sarvjeet S. - Chief Technology Officer - Ubiq",
+    "url": "https://in.linkedin.com/in/sarvjeet-s-72427b129",
+    "snippet": "Co-Founder and CTO at Ubiq Tech | Expert in AI, ML & Mobile App Development | Innovating the Future of Tech · ✓ Over 7+ years of dedicated Android ..."
+  },
+  "leadInfo": {
+    "company": "LinkedIn",
+    "contact_info": {
+      "emails": [],
+      "phones": [],
+      "website": "http://www.w3.org/2000/svg",
+      "linkedin": "https://in.linkedin.com/in/sarvjeet-s-72427b129",
+      "social": []
+    },
+    "key_people": [
+      {
+        "name": "Sarvjeet S.",
+        "title": "Professional Networker",
+        "email": null,
+        "linkedin": "https://in.linkedin.com/in/sarvjeet-s-72427b129"
+      }
+    ],
+    "business_info": {
+      "industry": "Technology / Professional Networking",
+      "size": "Large (LinkedIn is a well-established platform)",
+      "location": "Global",
+      "funding": "Publicly traded",
+      "stage": "Enterprise"
+    },
+    "pain_points": [
+      "Need for web and mobile development solutions",
+      "Competition in tech industry"
+    ],
+    "buying_signals": [
+      "Looking for web dev and mobile dev services",
+      "Engagement with startups"
+    ],
+    "lead_score": 6,
+    "pitch_angle": "Offer tailored web and mobile development solutions to enhance user engagement and platform capabilities.",
+    "raw_data": {
+      "platform": "linkedin",
+      "title": "LinkedIn",
+      "meta": {
+        "description": "",
+        "keywords": ""
+      },
+      "all_emails": [],
+      "all_phones": [],
+      "all_linkedin": [],
+      "all_websites": [
+        "http://www.w3.org/2000/svg\""
+      ],
+      "scraped_at": "2025-07-13T10:28:56.030Z"
+    }
+  },
+  "scrapedData": {
+    "content": "",
+    "emails": [],
+    "phones": [],
+    "linkedinUrls": [],
+    "websites": [
+      "http://www.w3.org/2000/svg\""
+    ],
+    "people": [],
+    "platformData": {
+      "type": "linkedin",
+      "companyName": "",
+      "followers": "",
+      "industry": "",
+      "description": ""
+    },
+    "title": "LinkedIn",
+    "meta": {
+      "description": "",
+      "keywords": ""
+    }
+  },
+  "score": 4,
+  "reason": "Fallback selection - company/profile page detected"
+}

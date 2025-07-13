@@ -1,0 +1,81 @@
+{
+  "source": {
+    "title": "Sanjay Ghinaiya - CEO & Founder at World Web Technology",
+    "url": "https://in.linkedin.com/in/sanjayghinaiya",
+    "snippet": "CEO & Founder at World Web Technology Pvt. Ltd. · Experience: World ... Services. Web Design · Graphic Design · Web Development · WordPress Design · Customer ..."
+  },
+  "leadInfo": {
+    "company": "LinkedIn",
+    "contact_info": {
+      "emails": [],
+      "phones": [],
+      "website": "http://www.w3.org/2000/svg",
+      "linkedin": "https://in.linkedin.com/in/sanjayghinaiya",
+      "social": []
+    },
+    "key_people": [
+      {
+        "name": "Sanjay Ghinaiya",
+        "title": "CEO/CTO",
+        "email": null,
+        "linkedin": "https://in.linkedin.com/in/sanjayghinaiya"
+      }
+    ],
+    "business_info": {
+      "industry": "B2B",
+      "size": null,
+      "location": null,
+      "funding": null,
+      "stage": null
+    },
+    "pain_points": [
+      "Need for web development",
+      "Need for mobile development"
+    ],
+    "buying_signals": [
+      "Looking for web and mobile development solutions",
+      "Targeting CEOs and CTOs"
+    ],
+    "lead_score": "7",
+    "pitch_angle": "Offer tailored web and mobile development solutions that address the specific needs of CEOs and CTOs in the B2B sector.",
+    "raw_data": {
+      "platform": "linkedin",
+      "title": "LinkedIn",
+      "meta": {
+        "description": "",
+        "keywords": ""
+      },
+      "all_emails": [],
+      "all_phones": [],
+      "all_linkedin": [],
+      "all_websites": [
+        "http://www.w3.org/2000/svg\""
+      ],
+      "scraped_at": "2025-07-13T10:19:32.733Z"
+    }
+  },
+  "scrapedData": {
+    "content": "",
+    "emails": [],
+    "phones": [],
+    "linkedinUrls": [],
+    "websites": [
+      "http://www.w3.org/2000/svg\""
+    ],
+    "people": [],
+    "platformData": {
+      "type": "linkedin",
+      "companyName": "",
+      "followers": "",
+      "industry": "",
+      "description": ""
+    },
+    "title": "LinkedIn",
+    "meta": {
+      "description": "",
+      "keywords": ""
+    }
+  },
+  "score": 7,
+  "reason": "CEO of a web design agency, likely to have decision-making power and potential service needs."
+}

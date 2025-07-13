@@ -1,0 +1,79 @@
+{
+  "source": {
+    "title": "Bharat Odedara - Krishang Technolab LLP",
+    "url": "https://in.linkedin.com/in/bharat-odedara-785bb186",
+    "snippet": "Bharat Odedara. Co-Founder and CTO | Web and Mobile App Development | ReactJs | Node.JS | Tailwind | Shopify | Hubspot CMS Expert | Krishang Technolab ..."
+  },
+  "leadInfo": {
+    "company": "LinkedIn",
+    "contact_info": {
+      "emails": [],
+      "phones": [],
+      "website": "http://www.w3.org/2000/svg",
+      "linkedin": "https://in.linkedin.com/in/bharat-odedara-785bb186",
+      "social": []
+    },
+    "key_people": [
+      {
+        "name": "Bharat Odedara",
+        "title": "Professional (LinkedIn Profile)",
+        "email": null,
+        "linkedin": "https://in.linkedin.com/in/bharat-odedara-785bb186"
+      }
+    ],
+    "business_info": {
+      "industry": "Technology/Software Development",
+      "size": "Small to Medium (Startup)",
+      "location": "India (inferred from LinkedIn URL)",
+      "funding": "Not specified",
+      "stage": "startup"
+    },
+    "pain_points": [
+      "Need for web development and mobile development services"
+    ],
+    "buying_signals": [
+      "Looking for web dev and mobile dev solutions"
+    ],
+    "lead_score": 6,
+    "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+    "raw_data": {
+      "platform": "linkedin",
+      "title": "LinkedIn",
+      "meta": {
+        "description": "",
+        "keywords": ""
+      },
+      "all_emails": [],
+      "all_phones": [],
+      "all_linkedin": [],
+      "all_websites": [
+        "http://www.w3.org/2000/svg\""
+      ],
+      "scraped_at": "2025-07-13T10:29:05.410Z"
+    }
+  },
+  "scrapedData": {
+    "content": "",
+    "emails": [],
+    "phones": [],
+    "linkedinUrls": [],
+    "websites": [
+      "http://www.w3.org/2000/svg\""
+    ],
+    "people": [],
+    "platformData": {
+      "type": "linkedin",
+      "companyName": "",
+      "followers": "",
+      "industry": "",
+      "description": ""
+    },
+    "title": "LinkedIn",
+    "meta": {
+      "description": "",
+      "keywords": ""
+    }
+  },
+  "score": 4,
+  "reason": "Fallback selection - company/profile page detected"
+}

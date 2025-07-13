@@ -1,0 +1,79 @@
+{
+  "source": {
+    "title": "Jamal Mohammed - Founder, Chief Technology Officer ...",
+    "url": "https://in.linkedin.com/in/mdjamal",
+    "snippet": "Founder, Chief Technology Officer (CTO), and Lead Software Developer (Atlas Health & ICE LABS) ... mobile app development roadmaps. Worked with co-founders on the ..."
+  },
+  "leadInfo": {
+    "company": "LinkedIn",
+    "contact_info": {
+      "emails": [],
+      "phones": [],
+      "website": "http://www.w3.org/2000/svg",
+      "linkedin": "https://in.linkedin.com/in/mdjamal",
+      "social": []
+    },
+    "key_people": [
+      {
+        "name": "Md Jamal",
+        "title": "Professional in Web and Mobile Development",
+        "email": null,
+        "linkedin": "https://in.linkedin.com/in/mdjamal"
+      }
+    ],
+    "business_info": {
+      "industry": "Technology / Web Development",
+      "size": "Small to Medium (Startup)",
+      "location": "Not specified",
+      "funding": "Not specified",
+      "stage": "Startup"
+    },
+    "pain_points": [
+      "Need for web and mobile development solutions"
+    ],
+    "buying_signals": [
+      "Looking for web dev and mobile dev services"
+    ],
+    "lead_score": 6,
+    "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+    "raw_data": {
+      "platform": "linkedin",
+      "title": "LinkedIn",
+      "meta": {
+        "description": "",
+        "keywords": ""
+      },
+      "all_emails": [],
+      "all_phones": [],
+      "all_linkedin": [],
+      "all_websites": [
+        "http://www.w3.org/2000/svg\""
+      ],
+      "scraped_at": "2025-07-13T10:27:16.384Z"
+    }
+  },
+  "scrapedData": {
+    "content": "",
+    "emails": [],
+    "phones": [],
+    "linkedinUrls": [],
+    "websites": [
+      "http://www.w3.org/2000/svg\""
+    ],
+    "people": [],
+    "platformData": {
+      "type": "linkedin",
+      "companyName": "",
+      "followers": "",
+      "industry": "",
+      "description": ""
+    },
+    "title": "LinkedIn",
+    "meta": {
+      "description": "",
+      "keywords": ""
+    }
+  },
+  "score": 4,
+  "reason": "Fallback selection - company/profile page detected"
+}

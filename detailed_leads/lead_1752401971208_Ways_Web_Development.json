@@ -1,0 +1,74 @@
+{
+  "source": {
+    "title": "Ways Web Development - Kedar Mallick",
+    "url": "https://in.linkedin.com/in/wayswebdevelopment",
+    "snippet": "Kedar Mallick. Founder & CEO, Ways Web Development. Ways Web Development Utkal University. Odisha, India."
+  },
+  "leadInfo": {
+    "company": "Ways Web Development",
+    "contact_info": {
+      "emails": [],
+      "phones": [],
+      "website": "http://www.w3.org/2000/svg",
+      "linkedin": "https://in.linkedin.com/in/wayswebdevelopment",
+      "social": []
+    },
+    "key_people": [],
+    "business_info": {
+      "industry": "Web Development",
+      "size": null,
+      "location": null,
+      "funding": null,
+      "stage": "startup"
+    },
+    "pain_points": [
+      "Need for reliable web development services",
+      "Requirement for mobile development expertise"
+    ],
+    "buying_signals": [
+      "Looking for web and mobile development solutions",
+      "Targeting CEOs and CTOs indicates a focus on decision-makers"
+    ],
+    "lead_score": "7",
+    "pitch_angle": "Highlight your expertise in delivering tailored web and mobile development solutions that can help streamline their operations and enhance their digital presence.",
+    "raw_data": {
+      "platform": "linkedin",
+      "title": "LinkedIn",
+      "meta": {
+        "description": "",
+        "keywords": ""
+      },
+      "all_emails": [],
+      "all_phones": [],
+      "all_linkedin": [],
+      "all_websites": [
+        "http://www.w3.org/2000/svg\""
+      ],
+      "scraped_at": "2025-07-13T10:19:31.196Z"
+    }
+  },
+  "scrapedData": {
+    "content": "",
+    "emails": [],
+    "phones": [],
+    "linkedinUrls": [],
+    "websites": [
+      "http://www.w3.org/2000/svg\""
+    ],
+    "people": [],
+    "platformData": {
+      "type": "linkedin",
+      "companyName": "",
+      "followers": "",
+      "industry": "",
+      "description": ""
+    },
+    "title": "LinkedIn",
+    "meta": {
+      "description": "",
+      "keywords": ""
+    }
+  },
+  "score": 8,
+  "reason": "CEO of a web development company, likely to have decision-making power and potential need for services."
+}

@@ -1,0 +1,79 @@
+{
+  "source": {
+    "title": "Mohit Gangwar - CEO & Founder - Chottadeveloper",
+    "url": "https://in.linkedin.com/in/mohit-gangwar011",
+    "snippet": "CEO & Founder at Chottadeveloper | Web Development | Digital Marketing | Consultant | Entrepreneur · I Am a CEO at Chottadeveloper.com I have experience ..."
+  },
+  "leadInfo": {
+    "company": "LinkedIn",
+    "contact_info": {
+      "emails": [],
+      "phones": [],
+      "website": "http://www.w3.org/2000/svg",
+      "linkedin": "https://in.linkedin.com/in/mohit-gangwar011",
+      "social": []
+    },
+    "key_people": [
+      {
+        "name": "Mohit Gangwar",
+        "title": "Web Developer/Startup Founder",
+        "email": null,
+        "linkedin": "https://in.linkedin.com/in/mohit-gangwar011"
+      }
+    ],
+    "business_info": {
+      "industry": "Technology/Web Development",
+      "size": "Small to Medium (Startup)",
+      "location": "India (inferred from LinkedIn URL)",
+      "funding": "Not specified",
+      "stage": "startup"
+    },
+    "pain_points": [
+      "Need for web and mobile development services"
+    ],
+    "buying_signals": [
+      "Looking for web dev and mobile dev solutions"
+    ],
+    "lead_score": 6,
+    "pitch_angle": "Offer tailored web and mobile development solutions to enhance their startup's digital presence.",
+    "raw_data": {
+      "platform": "linkedin",
+      "title": "LinkedIn",
+      "meta": {
+        "description": "",
+        "keywords": ""
+      },
+      "all_emails": [],
+      "all_phones": [],
+      "all_linkedin": [],
+      "all_websites": [
+        "http://www.w3.org/2000/svg\""
+      ],
+      "scraped_at": "2025-07-13T10:28:15.596Z"
+    }
+  },
+  "scrapedData": {
+    "content": "",
+    "emails": [],
+    "phones": [],
+    "linkedinUrls": [],
+    "websites": [
+      "http://www.w3.org/2000/svg\""
+    ],
+    "people": [],
+    "platformData": {
+      "type": "linkedin",
+      "companyName": "",
+      "followers": "",
+      "industry": "",
+      "description": ""
+    },
+    "title": "LinkedIn",
+    "meta": {
+      "description": "",
+      "keywords": ""
+    }
+  },
+  "score": 4,
+  "reason": "Fallback selection - company/profile page detected"
+}

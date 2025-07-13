@@ -1,0 +1,2291 @@
+{
+  "campaign": {
+    "business": "b2b",
+    "services": "web dev, mobile dev",
+    "audience": "ceos, ctos, startups",
+    "timestamp": "2025-07-13T10:29:21.116Z"
+  },
+  "strategy": {
+    "platforms": [
+      "linkedin.com",
+      "crunchbase.com",
+      "clutch.co",
+      "producthunt.com",
+      "angel.co",
+      "ycombinator.com",
+      "g2.com",
+      "quora.com"
+    ],
+    "keywords": [
+      "web development services",
+      "mobile app development",
+      "tech startups",
+      "B2B software solutions",
+      "digital transformation",
+      "custom software development",
+      "startup funding",
+      "CEO networking",
+      "CTO forums",
+      "business growth strategies"
+    ],
+    "dorks_used": 15
+  },
+  "results": {
+    "total_leads": 32,
+    "leads": [
+      {
+        "source": {
+          "title": "Siddhant Singh - Founder & CEO - WebShark Web Services",
+          "url": "https://in.linkedin.com/in/siddhantsinghrajput",
+          "snippet": "Founder & CEO at Webshark Web Services Pvt Ltd | Empowering Startups and ... web development and AI, brainstorming ways to drive growth, or simply ..."
+        },
+        "leadInfo": {
+          "company": "Webshark Web Services Pvt Ltd",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://www.linkedin.com/company/webshark-in",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Siddhant Singh",
+              "title": "Founder & CEO",
+              "email": "",
+              "linkedin": "https://in.linkedin.com/in/siddhantsinghrajput"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Design and Development, Digital Solutions",
+            "size": "Small to Medium (estimated 10-50 employees)",
+            "location": "Bengaluru, Karnataka, India",
+            "funding": "Not specified",
+            "stage": "Growth"
+          },
+          "pain_points": [
+            "Businesses struggling to establish a strong online presence",
+            "Need for tailored digital solutions in various industries"
+          ],
+          "buying_signals": [
+            "Interest in digital transformation",
+            "Looking for innovative web solutions"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Highlight the importance of a strong digital presence and how Webshark can tailor solutions to meet specific business needs.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) Siddhant Singh | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup",
+              "https://www.linkedin.com/company/webshark-in",
+              "https://www.linkedin.com/company/jswsteel",
+              "https://www.linkedin.com/company/iimatm-2024",
+              "https://www.linkedin.com/in/siddhantsinghrajput",
+              "https://www.linkedin.com/company/19058929",
+              "https://www.linkedin.com/company/1461117",
+              "https://www.linkedin.com/company/15129531",
+              "https://www.linkedin.com/company/1009",
+              "https://www.linkedin.com/company/1025",
+              "https://www.linkedin.com/company/9385515",
+              "https://www.linkedin.com/company/1028",
+              "https://www.linkedin.com/company/15115108",
+              "https://www.linkedin.com/company/50851",
+              "https://www.linkedin.com/in/kumar-ankit-dev",
+              "https://www.linkedin.com/in/karunakar-n-gowda-bangalore",
+              "https://www.linkedin.com/in/feba-c",
+              "https://www.linkedin.com/in/aryaveerjai",
+              "https://www.linkedin.com/in/rishika-saha-74975a192",
+              "https://www.linkedin.com/in/wellspring-creatives-6b7327224",
+              "https://www.linkedin.com/in/harshitdabas",
+              "https://www.linkedin.com/in/kavya-srivastava-43b199290",
+              "https://www.linkedin.com/in/anurag-chavan-5abab118",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:27:03.106Z"
+          }
+        },
+        "score": 10,
+        "reason": "CEO/Founder of a US-based web development company, indicating strong potential for collaboration."
+      },
+      {
+        "source": {
+          "title": "William Danielson - CEO / Web Developer at Mcanous ...",
+          "url": "https://www.linkedin.com/in/william-danielson-82040013",
+          "snippet": "... web development. Specialties: Preficient in Adobe Design, Microsoft Office ... CEO / Web Developer at Mcanous Design. Mcanous Design. Feb 2006 - Present ..."
+        },
+        "leadInfo": {
+          "company": "Mcanous Design",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.mcanousdesign.com",
+            "linkedin": "https://www.linkedin.com/in/william-danielson-82040013",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "William Danielson",
+              "title": "CEO / Web Developer",
+              "email": "",
+              "linkedin": "https://www.linkedin.com/in/william-danielson-82040013"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Design and Development",
+            "size": "Small (1-10 employees)",
+            "location": "Flushing, MI, USA",
+            "funding": "Not specified",
+            "stage": "Established"
+          },
+          "pain_points": [
+            "Need for effective web presence and SEO services for local businesses",
+            "Competition in the web design market"
+          ],
+          "buying_signals": [
+            "Active in web development and design for over 19 years",
+            "Experience with Shopify and SEO services"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Highlight the importance of a strong online presence and how Mcanous Design can enhance visibility and growth for local businesses through tailored web solutions.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) William Danielson | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/william-danielson-82040013",
+              "https://www.linkedin.com/company/2524502",
+              "https://www.linkedin.com/company/4184945",
+              "https://www.linkedin.com/company/12399",
+              "https://www.linkedin.com/in/cheryl-wolfram",
+              "https://www.linkedin.com/in/lillianpierson",
+              "https://www.linkedin.com/company/3076",
+              "https://www.linkedin.com/in/juleswebbdev",
+              "https://www.linkedin.com/in/matthewminten",
+              "https://www.linkedin.com/in/waltermartin",
+              "https://www.linkedin.com/in/daria-skripka-1a9340119",
+              "https://www.linkedin.com/in/laura-w-2b2801153",
+              "https://www.linkedin.com/in/adeeb-akmal-2376a7355",
+              "https://www.linkedin.com/in/chirag-chauhan-515a21260",
+              "https://www.linkedin.com/in/kavya-srivastava-43b199290",
+              "https://www.linkedin.com/in/anurag-chavan-5abab118",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://static.licdn",
+              "https://media.licdn",
+              "http://youedit.sugarbushms",
+              "https://px.ads"
+            ],
+            "scraped_at": "2025-07-13T10:27:22.787Z"
+          }
+        },
+        "score": 9,
+        "reason": "Founder & CEO focused on empowering startups, indicating potential need for web and mobile development services."
+      },
+      {
+        "source": {
+          "title": "Sultan Shahzad - CEO - The Custom Websites",
+          "url": "https://www.linkedin.com/in/sultanshahzad",
+          "snippet": "WEB Development || APP Development || Digital Marketing Expert || SEO ... CEO. The Custom Websites. Jan 2020 - Present 5 years 7 months. OOP Technologies ..."
+        },
+        "leadInfo": {
+          "company": "The Custom Websites",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://thecustomwebsites.com",
+            "linkedin": "https://www.linkedin.com/in/sultanshahzad",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Sultan Shahzad",
+              "title": "CEO",
+              "email": null,
+              "linkedin": "https://www.linkedin.com/in/sultanshahzad"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development, Digital Marketing, SEO",
+            "size": "Small to Medium (based on follower count and connections)",
+            "location": "Denver, Colorado, United States",
+            "funding": "Not specified",
+            "stage": "Growth"
+          },
+          "pain_points": [
+            "Need for enhanced digital presence",
+            "Challenges in SEO and online visibility"
+          ],
+          "buying_signals": [
+            "Interest in web and app development",
+            "Focus on customer satisfaction and tailored solutions"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Leverage Sultan's expertise in web development and SEO to enhance your digital presence and drive business growth.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) Sultan Shahzad | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup",
+              "https://www.linkedin.com/in/sultanshahzad",
+              "https://www.linkedin.com/company/the-custom-websites",
+              "https://www.linkedin.com/company/78334953",
+              "https://www.linkedin.com/company/69000458",
+              "https://www.linkedin.com/company/2516",
+              "https://www.linkedin.com/in/gotek7gotek8",
+              "https://www.linkedin.com/in/carlograffeo",
+              "https://www.linkedin.com/in/iqbal-lodhi",
+              "https://www.linkedin.com/in/ashba-yaqoob",
+              "https://www.linkedin.com/company/122628",
+              "https://www.linkedin.com/in/paolo-marini-94b5012a",
+              "https://www.linkedin.com/in/ehsan-dilfraz-b21415217",
+              "https://www.linkedin.com/in/taimoor-khan-2a8943235",
+              "https://www.linkedin.com/in/arslanelahidev",
+              "https://www.linkedin.com/in/sadafsultanchadhar",
+              "https://www.linkedin.com/in/wellspring-creatives-6b7327224",
+              "https://www.linkedin.com/in/anurag-chavan-5abab118",
+              "https://www.linkedin.com/in/ayushhooda",
+              "https://www.linkedin.com/in/harshitdabas",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/company/82640678",
+              "https://www.linkedin.com/company/1555603"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:27:29.160Z"
+          }
+        },
+        "score": 8,
+        "reason": "CEO of a web solutions company with over 12 years of experience, indicating strong business needs."
+      },
+      {
+        "source": {
+          "title": "Brijesh Mishra - Founder and CEO - Developers App India",
+          "url": "https://in.linkedin.com/in/brijeshmishrabmcoder",
+          "snippet": "Web Development · Application Development · Custom Software Development · Mobile ... CEO. BM Coder. Jun 2015 - Jan 2023 7 years 8 months. Ahmedabad Area, India."
+        },
+        "leadInfo": {
+          "company": "Brijesh Mishra BMCoder",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/brijeshmishrabmcoder",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Brijesh Mishra",
+              "title": "Web Developer / Mobile Developer",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/brijeshmishrabmcoder"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development / Mobile Development",
+            "size": "Small (1-10 employees estimated)",
+            "location": "India (inferred from LinkedIn URL)",
+            "funding": "Not available",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services",
+            "Limited resources for development"
+          ],
+          "buying_signals": [
+            "Looking for CEOs and CTOs",
+            "Targeting startups"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance startup growth and efficiency.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:26:49.312Z"
+          }
+        },
+        "score": 8,
+        "reason": "CEO & Founder of a web technology company, indicating potential for partnership in web development."
+      },
+      {
+        "source": {
+          "title": "Ways Web Development - Kedar Mallick",
+          "url": "https://in.linkedin.com/in/wayswebdevelopment",
+          "snippet": "Kedar Mallick. Founder & CEO, Ways Web Development. Ways Web Development Utkal University. Odisha, India."
+        },
+        "leadInfo": {
+          "company": "Ways Web Development",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/wayswebdevelopment",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Ways Web Development",
+              "title": "Web Development Company",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/wayswebdevelopment"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development",
+            "size": "Small to Medium",
+            "location": "Not specified",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development solutions"
+          ],
+          "buying_signals": [
+            "Looking for CEOs, CTOs, startups needing development services"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:26:49.346Z"
+          }
+        },
+        "score": 7,
+        "reason": "CEO of a web design and development company, indicating potential needs for web services."
+      },
+      {
+        "source": {
+          "title": "Rohit Tiwari - Founder & CEO Webdesino |Web design and ...",
+          "url": "https://www.linkedin.com/in/irohittiwari",
+          "snippet": "... web development agencies based in Delhi. With a deep passion for web ... Founder & CEO Webdesino |Web design and development expert | Programmer in C++ | DSA ..."
+        },
+        "leadInfo": {
+          "company": "Webdesino",
+          "contact_info": {
+            "emails": [],
+            "phones": [
+              "14187457049"
+            ],
+            "website": "http://webdesino.com",
+            "linkedin": "https://www.linkedin.com/in/irohittiwari",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Rohit Tiwari",
+              "title": "Founder & CEO",
+              "email": null,
+              "linkedin": "https://www.linkedin.com/in/irohittiwari"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development and Digital Marketing",
+            "size": "Small to Medium (estimated based on connections and followers)",
+            "location": "New Delhi, Delhi, India",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for enhanced online visibility",
+            "Challenges in lead generation",
+            "Demand for user-friendly web solutions"
+          ],
+          "buying_signals": [
+            "Active engagement in digital marketing discussions",
+            "Looking for partnerships and new challenges"
+          ],
+          "lead_score": "7",
+          "pitch_angle": "Offer tailored digital marketing solutions to enhance their service offerings and help them scale their client base.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) Rohit Tiwari | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [
+              "14187457049"
+            ],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup",
+              "https://www.linkedin.com/in/irohittiwari",
+              "https://www.linkedin.com/company/104168068",
+              "https://www.linkedin.com/company/85664702",
+              "https://www.linkedin.com/company/74940592",
+              "https://www.linkedin.com/company/15106123",
+              "https://www.linkedin.com/company/426734",
+              "https://www.linkedin.com/company/6882982",
+              "https://www.linkedin.com/company/105712556",
+              "https://www.linkedin.com/in/deekshapandey16",
+              "https://www.linkedin.com/in/suniel-shetty",
+              "https://www.linkedin.com/company/1035",
+              "https://www.linkedin.com/company/1441",
+              "https://www.linkedin.com/in/shivanginarula",
+              "https://www.linkedin.com/in/0-hs-0",
+              "https://www.linkedin.com/in/praket-raj-8a95671a5",
+              "https://www.linkedin.com/in/markmemayank",
+              "https://www.linkedin.com/in/kiwanasheb",
+              "https://www.linkedin.com/in/aditya-sharma-743349322",
+              "https://www.linkedin.com/in/adarsh-kumar-mishra-99a766275",
+              "https://www.linkedin.com/in/harshitdabas",
+              "https://www.linkedin.com/in/wellspring-creatives-6b7327224",
+              "https://www.linkedin.com/in/ayushhooda",
+              "https://www.linkedin.com/in/adeeb-akmal-2376a7355",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/company/82640678",
+              "https://www.linkedin.com/company/3486094"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:27:43.312Z"
+          }
+        },
+        "score": 7,
+        "reason": "CEO of a web development company with a focus on project management, indicating business needs."
+      },
+      {
+        "source": {
+          "title": "Deep Patel - Founder & CEO - Web-bunny Development",
+          "url": "https://in.linkedin.com/in/deeppatel52",
+          "snippet": "Experience · Web-bunny Development Graphic. Founder & CEO. Web-bunny Development. Apr 2016 - Present 9 years 4 months. Ahmedabad, Gujarat, India · Manager. Gopi ..."
+        },
+        "leadInfo": {
+          "company": "Demo Test Company",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://www.linkedin.com/in/demo-test-a42693360",
+            "social": [
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://www.web-bunny.com"
+            ]
+          },
+          "key_people": [
+            {
+              "name": "Deep Patel",
+              "title": "CEO/CTO (inferred from context)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/deeppatel52"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development / Mobile Development",
+            "size": "Small to Medium (estimated based on startup context)",
+            "location": "Not specified (assumed to be in the tech sector)",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions"
+          ],
+          "lead_score": "6",
+          "pitch_angle": "Offer tailored web and mobile development solutions to help scale their startup effectively.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://www.web-bunny.com"
+            ],
+            "scraped_at": "2025-07-13T10:27:03.093Z"
+          }
+        },
+        "score": 7,
+        "reason": "Founder & CEO of a web design and development agency, indicating potential needs for services."
+      },
+      {
+        "source": {
+          "title": "Kepler Wolsey - CEO / Founder at Web Dev U.S.",
+          "url": "https://www.linkedin.com/in/kepler-wolsey-334151140",
+          "snippet": "CEO / Founder at Web Dev U.S. · Looking to grow your business? Know ... Web Development · iOS Development · Software Testing · SaaS Development · Database ..."
+        },
+        "leadInfo": {
+          "company": "Web Dev U.S.",
+          "contact_info": {
+            "emails": [],
+            "phones": [
+              "775-720-4202"
+            ],
+            "website": "https://webdevus.com",
+            "linkedin": "https://www.linkedin.com/in/kepler-wolsey-334151140",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Kepler Wolsey",
+              "title": "CEO / Founder",
+              "email": null,
+              "linkedin": "https://www.linkedin.com/in/kepler-wolsey-334151140"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development",
+            "size": "Small to Medium (estimated 10-50 employees)",
+            "location": "Scottsdale, Arizona, United States",
+            "funding": "Not specified",
+            "stage": "Growth"
+          },
+          "pain_points": [
+            "Need for reliable web development solutions",
+            "Challenges in custom software development",
+            "Demand for effective marketing strategies"
+          ],
+          "buying_signals": [
+            "Looking to grow business",
+            "Offering custom solutions",
+            "Experience with government and medical groups"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Leverage your expertise in web development and custom software solutions to help businesses streamline their operations and enhance their online presence.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) Kepler Wolsey | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [
+              "775-720-4202"
+            ],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup",
+              "https://www.linkedin.com/in/kepler-wolsey-334151140",
+              "https://www.linkedin.com/company/51714210",
+              "https://www.linkedin.com/company/16197216",
+              "https://www.linkedin.com/in/corywarfield",
+              "https://www.linkedin.com/in/abelcak",
+              "https://www.linkedin.com/company/97900",
+              "https://www.linkedin.com/company/126230",
+              "https://www.linkedin.com/company/27022380",
+              "https://www.linkedin.com/company/18676292",
+              "https://www.linkedin.com/in/picklewix",
+              "https://www.linkedin.com/in/david-woodroofe-310245",
+              "https://www.linkedin.com/in/muhammad-saad-33aa55b4",
+              "https://www.linkedin.com/in/xavierhuang1234",
+              "https://www.linkedin.com/in/robinsonelaine",
+              "https://www.linkedin.com/in/kavya-srivastava-43b199290",
+              "https://www.linkedin.com/in/ayushhooda",
+              "https://www.linkedin.com/in/harshitdabas",
+              "https://www.linkedin.com/in/adeeb-akmal-2376a7355",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/company/82640678",
+              "https://www.linkedin.com/company/1555603"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:28:08.640Z"
+          }
+        },
+        "score": 6,
+        "reason": "CEO of a web development company, indicating potential for collaboration in web services."
+      },
+      {
+        "source": {
+          "title": "Sivakumar Dhanabalan - Nikitha Web Development",
+          "url": "https://in.linkedin.com/in/sivakumar-dhanabalan",
+          "snippet": "Sivakumar Dhanabalan. CEO at Nikitha Web Development. Nikitha Web Development Villupuram - Ganthi School. Greater Chennai Area."
+        },
+        "leadInfo": {
+          "company": "Sivakumar Dhanabalan",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/sivakumar-dhanabalan",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Sivakumar Dhanabalan",
+              "title": "Web Developer / Mobile Developer",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/sivakumar-dhanabalan"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development / Mobile Development",
+            "size": "Small to Medium (Startup)",
+            "location": "India (inferred from LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services",
+            "Lack of technical expertise in startups"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions",
+            "Targeting CEOs and CTOs"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to help startups scale efficiently.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:10.536Z"
+          }
+        },
+        "score": 6,
+        "reason": "CEO of a web design and development company, indicating potential needs for web services."
+      },
+      {
+        "source": {
+          "title": "Aarti Pandey - CEO - Web Techno Experts",
+          "url": "https://in.linkedin.com/in/webdevelopmentwte",
+          "snippet": "CEO, Web Techno Experts · Web Techno Experts is a leading Web Design ... skills of good quality professional website design & Web Development blended ..."
+        },
+        "leadInfo": {
+          "company": "Web Techno Experts",
+          "contact_info": {
+            "emails": [],
+            "phones": [
+              "1 9811028424"
+            ],
+            "website": "https://webtechnoexperts.com",
+            "linkedin": "https://www.linkedin.com/in/webdevelopmentwte",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Aarti Pandey",
+              "title": "CEO",
+              "email": null,
+              "linkedin": "https://www.linkedin.com/in/webdevelopmentwte"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Design & Development, Digital Marketing",
+            "size": "Small to Medium (500+ connections on LinkedIn)",
+            "location": "Greater Delhi Area, India",
+            "funding": "Not specified",
+            "stage": "Growth"
+          },
+          "pain_points": [
+            "Need for high-quality web design and development services",
+            "Struggle to attract internet traffic to business sites"
+          ],
+          "buying_signals": [
+            "Interest in eCommerce and mobile app development",
+            "Focus on improving business ROI through digital marketing"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Highlight how our advanced digital marketing solutions can enhance their existing services and drive more traffic to their clients' websites.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) Aarti Pandey | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [
+              "1 9811028424"
+            ],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup",
+              "https://www.linkedin.com/in/webdevelopmentwte",
+              "https://www.linkedin.com/company/13194247",
+              "https://www.linkedin.com/company/8618362",
+              "https://www.linkedin.com/in/satyanadella",
+              "https://www.linkedin.com/in/kunalbahl",
+              "https://www.linkedin.com/company/1016",
+              "https://www.linkedin.com/company/1901",
+              "https://www.linkedin.com/company/15126135",
+              "https://www.linkedin.com/company/15137957",
+              "https://www.linkedin.com/in/supriya-sethi-2010804a",
+              "https://www.linkedin.com/in/asthashri",
+              "https://www.linkedin.com/in/meghna-chauhan23o",
+              "https://www.linkedin.com/in/meenakshi-singhal-49741636",
+              "https://www.linkedin.com/in/meeruabbot",
+              "https://www.linkedin.com/in/deep-chaulya-2b078b36b",
+              "https://www.linkedin.com/in/anurag-chavan-5abab118",
+              "https://www.linkedin.com/in/chirag-chauhan-515a21260",
+              "https://www.linkedin.com/in/aarav-shrivastava-3a89b5290",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/company/82640678",
+              "https://www.linkedin.com/company/1555603"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:28:37.848Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Pervinder Singh - CEO of one of the best Web Designing ...",
+          "url": "https://in.linkedin.com/in/pervinder-singh-13160617",
+          "snippet": "CEO of one of the best Web Designing and development Company in Punjab. Web X Vision. Feb 2009 - Present 16 years 4 months. Website Designing , Web Development ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/pervinder-singh-13160617",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Pervinder Singh",
+              "title": "Professional (LinkedIn Profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/pervinder-singh-13160617"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology/Software Development",
+            "size": "Small to Medium (Startup)",
+            "location": "India (inferred from LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development solutions"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:13.177Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Mohit Gangwar - CEO & Founder - Chottadeveloper",
+          "url": "https://in.linkedin.com/in/mohit-gangwar011",
+          "snippet": "CEO & Founder at Chottadeveloper | Web Development | Digital Marketing | Consultant | Entrepreneur · I Am a CEO at Chottadeveloper.com I have experience ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/mohit-gangwar011",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Mohit Gangwar",
+              "title": "Web Developer/Startup Founder",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/mohit-gangwar011"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology/Web Development",
+            "size": "Small to Medium (Startup)",
+            "location": "India (inferred from LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their startup's digital presence.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:15.596Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Rick R - CEO - Lead Web Designs",
+          "url": "https://www.linkedin.com/in/rick-r-68490b79",
+          "snippet": "CEO at Lead Web Designs · Ever since I first got started with web development, I have enjoyed what I do. I have since worked for various companies, as well ..."
+        },
+        "leadInfo": {
+          "company": "Lead Web Designs",
+          "contact_info": {
+            "emails": [
+              "rick@leadwebdesigns.com"
+            ],
+            "phones": [],
+            "website": "https://leadwebdesigns.com",
+            "linkedin": "https://www.linkedin.com/in/rick-r-68490b79",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Rick R",
+              "title": "CEO",
+              "email": "rick@leadwebdesigns.com",
+              "linkedin": "https://www.linkedin.com/in/rick-r-68490b79"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development",
+            "size": "Small (1-10 employees)",
+            "location": "Loxahatchee, Florida, United States",
+            "funding": "Not specified",
+            "stage": "Growth"
+          },
+          "pain_points": [
+            "Need for effective web solutions",
+            "Client satisfaction management"
+          ],
+          "buying_signals": [
+            "Interest in connecting for projects",
+            "Experience in web development"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Offer tailored web development solutions to enhance client satisfaction and streamline project management.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) Rick R | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [
+              "rick@leadwebdesigns.com"
+            ],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup",
+              "https://www.linkedin.com/company/5278257",
+              "https://www.linkedin.com/in/rick-r-68490b79",
+              "https://www.linkedin.com/in/eries",
+              "https://www.linkedin.com/in/dharmesh",
+              "https://www.linkedin.com/company/752889",
+              "https://www.linkedin.com/company/869881",
+              "https://www.linkedin.com/in/robinsonelaine",
+              "https://www.linkedin.com/in/laura-w-2b2801153",
+              "https://www.linkedin.com/in/carolprocop",
+              "https://www.linkedin.com/in/andrewlowen",
+              "https://www.linkedin.com/in/michael-lorenzana-ba4b2b19",
+              "https://www.linkedin.com/in/anurag-chavan-5abab118",
+              "https://www.linkedin.com/in/medvita-healthtech-aa77792b4",
+              "https://www.linkedin.com/in/deep-chaulya-2b078b36b",
+              "https://www.linkedin.com/in/ayushhooda",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/company/82640678",
+              "https://www.linkedin.com/company/1555603"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:28:27.902Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Synovers Web Development - CEO",
+          "url": "https://in.linkedin.com/in/synovers-web-development-26ba9310b",
+          "snippet": "CEO in Synovers · Leading Web Designing and Web Development Company In Coimbatore · Experience: Synovers · Education: Park College of Engineering and ..."
+        },
+        "leadInfo": {
+          "company": "Synovers Web Development",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/synovers-web-development-26ba9310b",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Synovers Web Development",
+              "title": "Web Development Company",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/synovers-web-development-26ba9310b"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development",
+            "size": "Small to Medium (estimated)",
+            "location": "Not specified",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for CEOs, CTOs, and startups needing development services"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:16.949Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Vishal Sherathiya - Founder and CEO - Web To AI",
+          "url": "https://in.linkedin.com/in/vishal-sherathiya",
+          "snippet": "... CEO of Web to AI, I lead a dynamic team dedicated to delivering clean code ... Web Development · SaaS Development · Project Management · Information Security ..."
+        },
+        "leadInfo": {
+          "company": "Vishal Sherathiya",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/vishal-sherathiya",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Vishal Sherathiya",
+              "title": "Web Developer / Mobile Developer",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/vishal-sherathiya"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development / Mobile Development",
+            "size": "Small to Medium (Startup)",
+            "location": "India (assumed from LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for CEOs, CTOs, startups"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:22.173Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Harshdeep Kaur - Digital Web IT Solutions Pvt Ltd.",
+          "url": "https://in.linkedin.com/in/harshdeep-kaur-9931a010a",
+          "snippet": "CEO | Founder at Digital Web IT Solutions Pvt Ltd · ▻WHAT WE DO: We help ... Web Development ☆Wordpress ☆CSS/HTML ☆Mobile Responsive Design ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://business.linkedin",
+            "linkedin": "https://www.linkedin.com/company/setup",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Harshdeep Kaur",
+              "title": "Professional (inferred from LinkedIn profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/harshdeep-kaur-9931a010a"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology / Social Media",
+            "size": "Large (LinkedIn is a well-established platform)",
+            "location": "Global (LinkedIn operates worldwide)",
+            "funding": "Publicly traded (LinkedIn is owned by Microsoft)",
+            "stage": "Enterprise"
+          },
+          "pain_points": [
+            "Need for web development and mobile development solutions"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Leverage our web and mobile development expertise to enhance your platform's user engagement and functionality.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:28:29.344Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Sanjeev Kumar - Hilt Web Solutions Private Limited",
+          "url": "https://in.linkedin.com/in/sanjeev-kumar-697aa336",
+          "snippet": "Founder & Chief Executive Officer (CEO) at Hilt Web Solutions Private Limited · My name is Sanjeev Kumar, With over 12 years of experience in web development ..."
+        },
+        "leadInfo": {
+          "company": "Demo Test",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://business.linkedin",
+            "linkedin": "https://www.linkedin.com/in/demo-test-a42693360",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Sanjeev Kumar",
+              "title": "CEO/CTO",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/sanjeev-kumar-697aa336"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development / Mobile Development",
+            "size": "Small to Medium (estimated based on startup context)",
+            "location": "Not specified",
+            "funding": "Not specified",
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions"
+          ],
+          "lead_score": "6",
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:28:30.097Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Mohammad Javed - Founder & CEO @ WebPro Developers",
+          "url": "https://in.linkedin.com/in/mohammad-javed-17844326",
+          "snippet": "Founder & CEO @ WebPro Developers ... Manage multiple web development projects simultaneously, ensuring adherence to deadlines and budget constraints."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://business.linkedin",
+            "linkedin": "https://www.linkedin.com/company/setup",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Mohammad Javed",
+              "title": "Professional (LinkedIn Profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/mohammad-javed-17844326"
+            }
+          ],
+          "business_info": {
+            "industry": "Social Media/Networking",
+            "size": "Large",
+            "location": "Global",
+            "funding": "Publicly traded",
+            "stage": "Enterprise"
+          },
+          "pain_points": [
+            "Need for web and mobile development solutions"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Leverage our web and mobile development expertise to enhance your platform's user engagement and functionality.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:28:32.479Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Daveedu Raju Akurathi - CEO & Co-founder at The ...",
+          "url": "https://in.linkedin.com/in/daveedu-raju-akurathi",
+          "snippet": "Myself Daveedu Raju Akurathi, the CEO and Co-founder of The Website Makers. A passionate leader in the realm of web development and digital innovation, I ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://business.linkedin",
+            "linkedin": "https://www.linkedin.com/company/setup",
+            "social": [
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://www.thewebsitemakers.in"
+            ]
+          },
+          "key_people": [
+            {
+              "name": "Daveedu Raju Akurathi",
+              "title": "CEO/CTO (inferred from context)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/daveedu-raju-akurathi"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology/Software Development",
+            "size": "Small to Medium (estimated based on startup context)",
+            "location": "Not specified (assumed to be in tech hubs)",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web development and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web and mobile development solutions",
+            "Engagement on LinkedIn suggests active networking"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and support their growth.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://www.thewebsitemakers.in"
+            ],
+            "scraped_at": "2025-07-13T10:28:36.533Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Sanjay Ghinaiya - CEO & Founder at World Web Technology",
+          "url": "https://in.linkedin.com/in/sanjayghinaiya",
+          "snippet": "CEO & Founder at World Web Technology Pvt. Ltd. · Experience: World ... Services. Web Design · Graphic Design · Web Development · WordPress Design · Customer ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/sanjayghinaiya",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Sanjay Ghinaiya",
+              "title": "Professional (LinkedIn Profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/sanjayghinaiya"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology/Web Development",
+            "size": "Small to Medium (Startup)",
+            "location": "India (inferred from LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web development and mobile development solutions"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their startup's digital presence.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:42.118Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Goutham Iyyappan - A CTO who can Maintain & Scale ...",
+          "url": "https://in.linkedin.com/in/gouthamiyyappan",
+          "snippet": "A CTO who can Maintain & Scale Your Mobile Apps to 1M+ Users · Goutham is a passionate Entrepreneur who lives and breathes Mobile App Development."
+        },
+        "leadInfo": {
+          "company": "ThinkAlternate Technologies",
+          "contact_info": {
+            "emails": [
+              "meenakshi@thinkalternate.com"
+            ],
+            "phones": [],
+            "website": "https://www.thinkalternate.com",
+            "linkedin": "https://www.linkedin.com/in/gouthamiyyappan",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Goutham Iyyappan",
+              "title": "CTO & Founder",
+              "email": "meenakshi@thinkalternate.com",
+              "linkedin": "https://www.linkedin.com/in/gouthamiyyappan"
+            }
+          ],
+          "business_info": {
+            "industry": "Mobile App Development",
+            "size": "Small to Medium (500+ connections, 4,659 followers)",
+            "location": "Bengaluru, Karnataka, India",
+            "funding": "Not specified",
+            "stage": "Growth"
+          },
+          "pain_points": [
+            "Need for continuous app optimization",
+            "Performance issues leading to user drop-offs",
+            "Security vulnerabilities in mobile applications"
+          ],
+          "buying_signals": [
+            "Focus on maintaining and scaling mobile apps",
+            "Experience with international clients",
+            "Offering fractional-CTO services to startups"
+          ],
+          "lead_score": 8,
+          "pitch_angle": "Leverage Goutham's expertise in mobile app development to enhance your app's performance and security, ensuring it remains competitive in a fast-evolving digital landscape.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "(16) Goutham Iyyappan | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [
+              "meenakshi@thinkalternate.com"
+            ],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup",
+              "https://www.linkedin.com/in/gouthamiyyappan",
+              "https://www.linkedin.com/company/dailybreathapp",
+              "https://www.linkedin.com/in/ACoAAAAB9dABQFgkMO-wyvaFOFWDNeOdNsbqpcg",
+              "https://www.linkedin.com/in/ACoAABYl6Q0BAxgpqQtC3N1b7-gNSsg5cwJ1TIo",
+              "https://www.linkedin.com/company/104123829",
+              "https://www.linkedin.com/company/74147809",
+              "https://www.linkedin.com/company/89542503",
+              "https://www.linkedin.com/company/74150060",
+              "https://www.linkedin.com/company/18156690",
+              "https://www.linkedin.com/company/1337",
+              "https://www.linkedin.com/company/822535",
+              "https://www.linkedin.com/company/6917",
+              "https://www.linkedin.com/company/68945376",
+              "https://www.linkedin.com/in/kartik-chhabria",
+              "https://www.linkedin.com/in/saurabhlakshman",
+              "https://www.linkedin.com/in/melvin-paul07",
+              "https://www.linkedin.com/in/ksodan",
+              "https://www.linkedin.com/in/alexstephany",
+              "https://www.linkedin.com/in/gazdik",
+              "https://www.linkedin.com/company/1015",
+              "https://www.linkedin.com/company/1058",
+              "https://www.linkedin.com/company/80744552",
+              "https://www.linkedin.com/company/11280505",
+              "https://www.linkedin.com/company/167872",
+              "https://www.linkedin.com/company/15115108",
+              "https://www.linkedin.com/in/kunguma-meenakshi-somasundaram-2880a7125",
+              "https://www.linkedin.com/in/kruthism",
+              "https://www.linkedin.com/in/absachinanchan",
+              "https://www.linkedin.com/in/adityalokesharaj",
+              "https://www.linkedin.com/in/shaanviruz",
+              "https://www.linkedin.com/in/chirag-chauhan-515a21260",
+              "https://www.linkedin.com/in/medvita-healthtech-aa77792b4",
+              "https://www.linkedin.com/in/kavya-srivastava-43b199290",
+              "https://www.linkedin.com/in/deep-chaulya-2b078b36b",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/company/82640678",
+              "https://www.linkedin.com/company/1555603"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://www.thinkalternate.com"
+            ],
+            "scraped_at": "2025-07-13T10:29:21.108Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Nitin Gohel - Director & CTO at APPREATOR ...",
+          "url": "https://in.linkedin.com/in/nitingohel",
+          "snippet": "As the Director & CTO at Appreator Technologies LLP, I have a strong focus on mobile app development, showcasing our expertise in creating exceptional ..."
+        },
+        "leadInfo": {
+          "company": "Nitin Gohel",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/nitingohel",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Nitin Gohel",
+              "title": "Web Developer / Mobile Developer",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/nitingohel"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development / Mobile Development",
+            "size": "Small to Medium (Startup)",
+            "location": null,
+            "funding": null,
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development solutions",
+            "Limited resources for tech development"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services",
+            "Targeting CEOs and CTOs"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to startups looking to enhance their digital presence.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:45.892Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Keyar Srinivasan - Chief Technology Officer - O Clock ...",
+          "url": "https://in.linkedin.com/in/keyar",
+          "snippet": "... (CTO) at OClock Software Pvt Ltd, with over 24 years of experience in ... Mobile App Development: Expertise in Flutter, React Native, SwiftUI, and ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/keyar",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Keyar",
+              "title": "Professional (LinkedIn Profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/keyar"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology/Software Development",
+            "size": "Small to Medium (Startup)",
+            "location": "Not specified (assumed to be India based on LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web development and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their startup's digital presence.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:46.369Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Parth Vora - CTO & Co-Founder - Tecocraft",
+          "url": "https://in.linkedin.com/in/parth-vora112",
+          "snippet": "... CTO of Tecocraft, I've had the privilege of leading a skilled team that has ... Mobile App Development → Android Development → Product Lifecycle ..."
+        },
+        "leadInfo": {
+          "company": "Parth Vora's Startup",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/parth-vora112",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Parth Vora",
+              "title": "CEO/Founder",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/parth-vora112"
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development, Mobile Development",
+            "size": "Small (Startup)",
+            "location": "India (inferred from LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to help startups scale their digital presence.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:52.223Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Sarvjeet S. - Chief Technology Officer - Ubiq",
+          "url": "https://in.linkedin.com/in/sarvjeet-s-72427b129",
+          "snippet": "Co-Founder and CTO at Ubiq Tech | Expert in AI, ML & Mobile App Development | Innovating the Future of Tech · ✓ Over 7+ years of dedicated Android ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/sarvjeet-s-72427b129",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Sarvjeet S.",
+              "title": "Professional Networker",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/sarvjeet-s-72427b129"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology / Professional Networking",
+            "size": "Large (LinkedIn is a well-established platform)",
+            "location": "Global",
+            "funding": "Publicly traded",
+            "stage": "Enterprise"
+          },
+          "pain_points": [
+            "Need for web and mobile development solutions",
+            "Competition in tech industry"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services",
+            "Engagement with startups"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance user engagement and platform capabilities.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:28:56.030Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Bharat Odedara - Krishang Technolab LLP",
+          "url": "https://in.linkedin.com/in/bharat-odedara-785bb186",
+          "snippet": "Bharat Odedara. Co-Founder and CTO | Web and Mobile App Development | ReactJs | Node.JS | Tailwind | Shopify | Hubspot CMS Expert | Krishang Technolab ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/bharat-odedara-785bb186",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Bharat Odedara",
+              "title": "Professional (LinkedIn Profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/bharat-odedara-785bb186"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology/Software Development",
+            "size": "Small to Medium (Startup)",
+            "location": "India (inferred from LinkedIn URL)",
+            "funding": "Not specified",
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web development and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:29:05.410Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Jamal Mohammed - Founder, Chief Technology Officer ...",
+          "url": "https://in.linkedin.com/in/mdjamal",
+          "snippet": "Founder, Chief Technology Officer (CTO), and Lead Software Developer (Atlas Health & ICE LABS) ... mobile app development roadmaps. Worked with co-founders on the ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/mdjamal",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Md Jamal",
+              "title": "Professional in Web and Mobile Development",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/mdjamal"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology / Web Development",
+            "size": "Small to Medium (Startup)",
+            "location": "Not specified",
+            "funding": "Not specified",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Need for web and mobile development solutions"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:27:16.384Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Ajeshkumar C. - Founder & CTO - DXB APPS",
+          "url": "https://www.linkedin.com/in/ajeshkumar-c-4b7534139/",
+          "snippet": "Highly experienced professional with expertise in blockchain technology, mobile app development, and AI solutions. Founder and CTO of DXB APPS - D X ..."
+        },
+        "leadInfo": {
+          "company": "DXB Apps - D X Technologies LLC",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.dxbapps.com",
+            "linkedin": "https://www.linkedin.com/in/ajeshkumar-c-4b7534139/",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Ajeshkumar C.",
+              "title": "Founder & CTO",
+              "email": null,
+              "linkedin": "https://www.linkedin.com/in/ajeshkumar-c-4b7534139/"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology / Digital Innovation",
+            "size": "Small to Medium (estimated based on connections and followers)",
+            "location": "Dubai, United Arab Emirates",
+            "funding": "Not specified",
+            "stage": "Growth"
+          },
+          "pain_points": [
+            "Need for innovative mobile app solutions",
+            "Challenges in blockchain technology adoption",
+            "Demand for AI and machine learning integration"
+          ],
+          "buying_signals": [
+            "Interest in collaboration opportunities",
+            "Engagement with new clients and ideas",
+            "Active participation in blockchain initiatives"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Leverage DXB Apps' expertise in blockchain and mobile app development to transform your innovative ideas into successful applications.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "Ajeshkumar C. | LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/ajeshkumar-c-4b7534139",
+              "https://www.linkedin.com/company/23706002",
+              "https://www.linkedin.com/company/85076602",
+              "https://www.linkedin.com/company/67875969",
+              "https://www.linkedin.com/company/81806575",
+              "https://www.linkedin.com/company/40876336",
+              "https://www.linkedin.com/in/daipayan-a-37826419",
+              "https://www.linkedin.com/in/yasirjamal87",
+              "https://www.linkedin.com/company/1009",
+              "https://www.linkedin.com/company/1015",
+              "https://www.linkedin.com/company/1649",
+              "https://www.linkedin.com/in/nadineimad",
+              "https://www.linkedin.com/company/4831032",
+              "https://www.linkedin.com/company/6379621",
+              "https://www.linkedin.com/in/viyat",
+              "https://www.linkedin.com/in/ajinkya-kalantri-25b8937b",
+              "https://www.linkedin.com/in/jehanzeb-awan-56b08430",
+              "https://www.linkedin.com/in/drmarwan",
+              "https://www.linkedin.com/in/ali-safri-7025a71",
+              "https://www.linkedin.com/in/harshitdabas",
+              "https://www.linkedin.com/in/deep-chaulya-2b078b36b",
+              "https://www.linkedin.com/in/kavya-srivastava-43b199290",
+              "https://www.linkedin.com/in/ayushhooda",
+              "https://www.linkedin.com/in/rgxai",
+              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
+              "https://www.linkedin.com/in/richa-sharma-570503189",
+              "https://www.linkedin.com/in/zaur-xing-27583b272",
+              "https://www.linkedin.com/in/karan-kumar-74a999226",
+              "https://www.linkedin.com/company/1555603",
+              "https://www.linkedin.com/company/4842724"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://media.licdn",
+              "http://www.dxbapps.com",
+              "https://static.licdn",
+              "https://www.blockchain.com"
+            ],
+            "scraped_at": "2025-07-13T10:27:26.703Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Manash Athparia - React Native Developer - CTO-Ninja",
+          "url": "https://in.linkedin.com/in/manash-athparia-a0b7a116b",
+          "snippet": "Manash Athparia. React Native Developer at CTO-Ninja | Mobile App Development Expert. CTO-Ninja Pragjyotish College. Guwahati, Assam, India. 638 ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "http://www.w3.org/2000/svg",
+            "linkedin": "https://in.linkedin.com/in/manash-athparia-a0b7a116b",
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Manash Athparia",
+              "title": "Professional (LinkedIn Profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/manash-athparia-a0b7a116b"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology / Web Development",
+            "size": "Small to Medium (Startup)",
+            "location": null,
+            "funding": null,
+            "stage": "startup"
+          },
+          "pain_points": [
+            "Need for web development and mobile development services"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev solutions"
+          ],
+          "lead_score": 6,
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\""
+            ],
+            "scraped_at": "2025-07-13T10:27:33.281Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Ketul Chauhan - CTO, Sr. Web Developer - Creer InfoTech",
+          "url": "https://in.linkedin.com/in/ketul-chauhan-ba215a58",
+          "snippet": "CTO @ CREER INFOTECH | Revolutionising Businesses with State-of-the-Art Digital Solutions in AI, Web Development, and Mobile App Development · Experienced ..."
+        },
+        "leadInfo": {
+          "company": "LinkedIn",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://business.linkedin",
+            "linkedin": "https://www.linkedin.com/company/setup",
+            "social": [
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ]
+          },
+          "key_people": [
+            {
+              "name": "Ketul Chauhan",
+              "title": "Professional (inferred from LinkedIn profile)",
+              "email": null,
+              "linkedin": "https://in.linkedin.com/in/ketul-chauhan-ba215a58"
+            }
+          ],
+          "business_info": {
+            "industry": "Technology/Professional Networking",
+            "size": "Large (inferred from LinkedIn's scale)",
+            "location": "Global (inferred from LinkedIn's operations)",
+            "funding": "Publicly traded (inferred from being a large company)",
+            "stage": "Enterprise"
+          },
+          "pain_points": [
+            "Need for web and mobile development solutions for startups"
+          ],
+          "buying_signals": [
+            "Looking for web dev and mobile dev services"
+          ],
+          "lead_score": "7",
+          "pitch_angle": "Offer tailored web and mobile development solutions to enhance LinkedIn's platform for startups.",
+          "raw_data": {
+            "platform": "linkedin",
+            "title": "LinkedIn",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [
+              "https://www.linkedin.com/in/demo-test-a42693360",
+              "https://www.linkedin.com/company/setup"
+            ],
+            "all_websites": [
+              "http://www.w3.org/2000/svg\"",
+              "https://business.linkedin",
+              "https://premium.linkedin",
+              "https://learning.linkedin",
+              "https://media.licdn"
+            ],
+            "scraped_at": "2025-07-13T10:27:35.501Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "HappyWP, Address, Data & More",
+          "url": "https://clutch.co/profile/happywp",
+          "snippet": "HappyWP is the go-to agency for on-demand, high-impact WordPress solutions tailored to the unique needs of enterprise-level companies and recently funded"
+        },
+        "leadInfo": {
+          "company": "HappyWP",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://happywp.co",
+            "linkedin": null,
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Nathan Parikh",
+              "title": "Founder/CEO",
+              "email": null,
+              "linkedin": null
+            }
+          ],
+          "business_info": {
+            "industry": "Web Development",
+            "size": "2 - 9 employees",
+            "location": "Fort Worth, TX",
+            "funding": "Recently funded startups",
+            "stage": "startup/growth"
+          },
+          "pain_points": [
+            "Need for high-impact WordPress solutions",
+            "Demand for custom web development for enterprise-level companies"
+          ],
+          "buying_signals": [
+            "Focus on enterprise-level companies",
+            "Willingness to take on projects starting at $10,000"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Position HappyWP as a specialized partner for startups and enterprises looking for tailored WordPress solutions that ensure high performance and scalability.",
+          "raw_data": {
+            "platform": "website",
+            "title": "HappyWP, Address, Data & More",
+            "meta": {
+              "description": "HappyWP is the go-to agency for on-demand, high-impact WordPress solutions tailored to the unique needs of enterprise-level companies and recently funded startups.",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "https://shortlist.clutch",
+              "https://r.clutch",
+              "https://img.shgstatic",
+              "https://project.clutch",
+              "https://happywp.co"
+            ],
+            "scraped_at": "2025-07-13T10:27:55.045Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      },
+      {
+        "source": {
+          "title": "Stratton Equities, 1 Review, Address, Data & More",
+          "url": "https://clutch.co/profile/stratton-equities",
+          "snippet": "Recently Funded - Term Loan - Winter Haven, FL. Business Consulting. Message fro ..."
+        },
+        "leadInfo": {
+          "company": "Stratton Equities",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://www.strattonequities.com",
+            "linkedin": null,
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "Owner",
+              "title": "Owner/Operator",
+              "email": null,
+              "linkedin": null
+            }
+          ],
+          "business_info": {
+            "industry": "Financial Services / Real Estate Lending",
+            "size": "10 - 49 employees",
+            "location": "Montville, NJ",
+            "funding": null,
+            "stage": "growth"
+          },
+          "pain_points": [
+            "Need for fast and flexible lending solutions",
+            "Challenges in securing funding for real estate investments"
+          ],
+          "buying_signals": [
+            "Interest in portfolio expansion",
+            "Previous engagement with financial advisors"
+          ],
+          "lead_score": 7,
+          "pitch_angle": "Highlight the speed and flexibility of your lending solutions, emphasizing personalized service and expertise in real estate investments.",
+          "raw_data": {
+            "platform": "website",
+            "title": "Stratton Equities, 1 Review, Address, Data & More",
+            "meta": {
+              "description": "Stratton Equities is the Leading Nationwide Private Money & NON-QM Mortgage Lender that specializes in fast and flexible lending processes. We have the largest",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "https://shortlist.clutch",
+              "https://r.clutch",
+              "https://img.shgstatic",
+              "https://project.clutch",
+              "https://www.strattonequities.com"
+            ],
+            "scraped_at": "2025-07-13T10:27:48.648Z"
+          }
+        },
+        "score": 4,
+        "reason": "Fallback selection - company/profile page detected"
+      }
+    ]
+  }
+}
