@@ -6,3 +6,5 @@ raw/
 deepscrape/
 data_preprocessing/venv/
 data_preprocessing/log.txt
+detailed_leads/
+leads/

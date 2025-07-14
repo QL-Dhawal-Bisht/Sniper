@@ -5,668 +5,786 @@ const { OpenAI } = require('openai');
 const readline = require('readline');
 require('dotenv').config();
 
-const rawDir = path.join(__dirname, 'raw');
-const deepDir = path.join(__dirname, 'deepscrape');
-if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir);
-if (!fs.existsSync(deepDir)) fs.mkdirSync(deepDir);
+const openai = new OpenAI({ apiKey: process.env.OpenAI_API_KEY });
 
-const openai = new OpenAI({
-  apiKey: process.env.OpenAI_API_KEY
-});
-
-// User input interface
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-const askQuestion = (question) => {
-  return new Promise((resolve) => {
-    rl.question(question, (answer) => {
-      resolve(answer);
-    });
-  });
-};
+const ask = (question) => new Promise(resolve => rl.question(question, resolve));
 
-class DynamicLeadGenerator {
+class SmartLeadGenerator {
   constructor() {
-    // Comprehensive platform mapping with specific use cases
-    this.platformStrategies = {
-      'linkedin': {
-        domains: ['linkedin.com/company', 'linkedin.com/in'],
-        strengths: ['B2B contacts', 'decision makers', 'company info', 'professional networking'],
-        selectors: [
-          'site:linkedin.com/company',
-          'site:linkedin.com/in',
-          'inurl:linkedin.com/company',
-          'inurl:linkedin.com/pulse'
-        ]
-      },
-      'crunchbase': {
-        domains: ['crunchbase.com/organization'],
-        strengths: ['startup funding', 'company financials', 'growth stage', 'investor info'],
-        selectors: ['site:crunchbase.com/organization', 'site:crunchbase.com/company']
-      },
-      'clutch': {
-        domains: ['clutch.co/profile', 'clutch.co/directory'],
-        strengths: ['service providers', 'client reviews', 'project portfolios', 'B2B services'],
-        selectors: ['site:clutch.co/profile', 'site:clutch.co/directory']
-      },
-      'reddit': {
-        domains: ['reddit.com/r/'],
-        strengths: ['pain points', 'recommendations', 'community discussions', 'real feedback'],
-        selectors: ['site:reddit.com/r/', 'site:reddit.com']
-      },
-      'ycombinator': {
-        domains: ['ycombinator.com/companies', 'news.ycombinator.com'],
-        strengths: ['startups', 'tech companies', 'funding info', 'innovation'],
-        selectors: ['site:ycombinator.com/companies', 'site:news.ycombinator.com']
-      },
-      'indiehackers': {
-        domains: ['indiehackers.com'],
-        strengths: ['bootstrap startups', 'solo entrepreneurs', 'SaaS founders', 'growth stories'],
-        selectors: ['site:indiehackers.com']
-      },
-      'angellist': {
-        domains: ['angel.co/company', 'wellfound.com'],
-        strengths: ['startup jobs', 'equity positions', 'company culture', 'team info'],
-        selectors: ['site:angel.co/company', 'site:wellfound.com']
-      },
-      'github': {
-        domains: ['github.com'],
-        strengths: ['tech companies', 'open source', 'developer tools', 'technical needs'],
-        selectors: ['site:github.com']
-      },
-      'stackoverflow': {
-        domains: ['stackoverflow.com/jobs', 'stackoverflow.com/questions'],
-        strengths: ['technical hiring', 'developer pain points', 'solution seeking'],
-        selectors: ['site:stackoverflow.com/jobs', 'site:stackoverflow.com/questions']
-      },
-      'directories': {
-        domains: ['yellowpages.com', 'yelp.com', 'trustpilot.com', 'g2.com', 'capterra.com'],
-        strengths: ['local businesses', 'reviews', 'contact info', 'service ratings'],
-        selectors: ['site:yellowpages.com', 'site:yelp.com', 'site:trustpilot.com', 'site:g2.com', 'site:capterra.com']
-      },
-      'forums': {
-        domains: ['quora.com', 'producthunt.com'],
-        strengths: ['questions', 'product launches', 'community feedback', 'expert opinions'],
-        selectors: ['site:quora.com', 'site:producthunt.com']
-      }
-    };
-
-    // Intent-based keywords for finding prospects
-    this.intentKeywords = {
-      'looking_for': [
-        '"looking for"', '"searching for"', '"need help with"', '"seeking"', 
-        '"in search of"', '"trying to find"', '"want to hire"', '"need a"'
-      ],
-      'pain_points': [
-        '"struggling with"', '"having trouble"', '"problems with"', '"issues with"',
-        '"challenges"', '"frustrated with"', '"difficult to"', '"can\'t figure out"'
-      ],
-      'budget_indicators': [
-        '"budget for"', '"cost of"', '"price range"', '"how much"', 
-        '"afford"', '"investment in"', '"spending on"'
-      ],
-      'urgency': [
-        '"urgent"', '"asap"', '"immediately"', '"deadline"', 
-        '"by end of"', '"need fast"', '"quick turnaround"'
-      ],
-      'decision_making': [
-        '"CEO"', '"CTO"', '"founder"', '"director"', '"manager"', 
-        '"head of"', '"VP"', '"chief"', '"owner"', '"decision maker"'
-      ],
-      'company_stage': [
-        '"startup"', '"scale up"', '"growing company"', '"established business"',
-        '"small business"', '"SMB"', '"enterprise"', '"Fortune 500"'
-      ]
-    };
+    this.browser = null;
+    this.pages = [];
+    this.maxTabs = 5;
+    this.resultsDir = path.join(__dirname, 'leads');
+    this.deepDir = path.join(__dirname, 'detailed_leads');
+    this.pageQueue = [];
+    this.userInput = null; // Store userInput for access in searchLinkedInProfile
+    
+    if (!fs.existsSync(this.resultsDir)) fs.mkdirSync(this.resultsDir);
+    if (!fs.existsSync(this.deepDir)) fs.mkdirSync(this.deepDir);
   }
 
   async init() {
+    console.log('🚀 Initializing browser...');
     this.browser = await chromium.launchPersistentContext('D:/Projects/chrome-profile-copy', {
       headless: false,
       executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-      ignoreDefaultArgs: ['--enable-automation'],
-      args: ['--start-maximized', '--disable-blink-features=AutomationControlled']
+      ignoreDefaultArgs: ['--enable-automation']
     });
-    this.page = await this.browser.newPage();
-    await this.page.addInitScript(() => {
-      Object.defineProperty(navigator, 'webdriver', { get: () => false });
-    });
+
+    for (let i = 0; i < this.maxTabs; i++) {
+      const page = await this.browser.newPage();
+      await page.addInitScript(() => {
+        Object.defineProperty(navigator, 'webdriver', { get: () => false });
+      });
+      this.pages.push(page);
+      this.pageQueue.push(i);
+    }
+  }
+
+  getAvailablePage() {
+    return this.pageQueue.shift();
+  }
+
+  releasePage(pageIndex) {
+    this.pageQueue.push(pageIndex);
   }
 
   async getUserInput() {
-    console.log('\n🎯 Dynamic Lead Generator - Setup\n');
-    
-    const business = await askQuestion('Enter your business type (e.g., "B2B SaaS", "Digital Marketing Agency", "E-commerce Platform"): ');
-    const services = await askQuestion('Enter your services (e.g., "Web development, mobile apps, API integration"): ');
-    const audience = await askQuestion('Enter your target audience (e.g., "Early-stage startups", "SMBs in healthcare", "Enterprise retailers"): ');
-    const budget = await askQuestion('Enter typical client budget range (e.g., "$5k-50k", "Enterprise level", "Bootstrap friendly"): ');
-    const geography = await askQuestion('Enter target geography (e.g., "US", "Global", "Europe", "Remote-first"): ');
+    const business = await ask('Business type: ');
+    const services = await ask('Services offered: ');
+    const audience = await ask('Target audience: ');
+    const budget = await ask('Budget range: ');
+    const geography = await ask('Geography: ');
     
     rl.close();
-    
-    return { business, services, audience, budget, geography };
+    this.userInput = { business, services, audience, budget, geography }; // Store userInput
+    return this.userInput;
   }
 
-  async analyzeBestPlatforms(business, services, audience, budget, geography) {
-    const prompt = `You are an expert lead generation strategist. Analyze the following business requirements and recommend the TOP 6 most effective platforms for finding leads.
+  async generateSearchStrategy(userInput) {
+    const prompt = `You are an expert lead generation strategist. Based on the business requirements, generate a comprehensive search strategy with a balanced distribution across multiple platforms.
 
-Business Type: ${business}
-Services Offered: ${services}
-Target Audience: ${audience}
-Budget Range: ${budget}
-Geography: ${geography}
+Business: ${userInput.business}
+Services: ${userInput.services}  
+Target Audience: ${userInput.audience}
+Budget: ${userInput.budget}
+Geography: ${userInput.geography}
 
-Available platforms and their strengths:
-${Object.entries(this.platformStrategies).map(([platform, info]) => 
-  `${platform}: ${info.strengths.join(', ')}`
-).join('\n')}
+Generate a JSON response with:
+1. "platforms": Array of 8-10 diverse platforms/websites for finding leads (e.g., "linkedin.com", "crunchbase.com", "clutch.co", "reddit.com", "indiehackers.com", "angel.co", "producthunt.com", "ycombinator.com", "betalist.com", "capterra.com", "g2.com", "quora.com"). Ensure no single platform (e.g., LinkedIn) dominates; include at least 3 non-LinkedIn platforms relevant to the business type and audience.
+2. "keywords": Array of 8-10 targeted keywords/phrases tailored to the services and audience.
+3. "dorks": Array of 12-15 advanced Google search dorks using the platforms and keywords, with balanced representation across platforms.
 
-Consider:
-1. Where your target audience is most active
-2. Platform alignment with business type
-3. Budget compatibility
-4. Geographic reach
-5. Lead quality potential
+Focus on platforms where decision-makers discuss needs or seek services. Avoid GitHub, StackOverflow. Ensure dorks are specific to finding active prospects with buying intent, and distribute them evenly across the selected platforms.
 
-Return ONLY the 6 platform names (linkedin, crunchbase, reddit, etc.) in order of priority, one per line. No explanations, no numbers, no formatting.`;
+Return only valid JSON.`;
 
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [{ role: 'user', content: prompt }],
-      max_tokens: 100,
-      temperature: 0.3
+      max_tokens: 1000,
+      temperature: 0.7
     });
 
-    const platforms = response.choices[0].message.content
-      .split('\n')
-      .map(p => p.trim().toLowerCase())
-      .filter(p => p && this.platformStrategies[p])
-      .slice(0, 6);
-
-    console.log('\n🎯 Selected Priority Platforms:');
-    platforms.forEach((platform, i) => {
-      console.log(`${i + 1}. ${platform.toUpperCase()} - ${this.platformStrategies[platform].strengths.join(', ')}`);
-    });
-
-    return platforms;
-  }
-
-  async generateAdvancedDorks(business, services, audience, budget, geography, platforms) {
-    const prompt = `You are the world's best Google dorking expert. Create 12 highly advanced, laser-targeted Google search dorks for B2B lead generation.
-
-TARGET PROFILE:
-Business Type: ${business}
-Services: ${services}
-Target Audience: ${audience}
-Budget: ${budget}
-Geography: ${geography}
-
-PRIORITY PLATFORMS: ${platforms.join(', ')}
-
-ADVANCED DORKING REQUIREMENTS:
-1. Use these intent keywords strategically: "looking for", "need", "seeking", "hiring", "budget for", "struggling with"
-2. Include decision-maker titles: CEO, CTO, founder, director, head of, VP
-3. Combine multiple operators: site:, inurl:, intitle:, filetype:, "exact phrases"
-4. Target pain points and active buying signals
-5. Include company size indicators
-6. Add geographic targeting when relevant
-7. Look for project announcements, job postings, forum discussions
-8. Find companies mentioning competitors or alternatives
-
-PLATFORM-SPECIFIC TACTICS:
-- LinkedIn: Company pages, job postings, executive profiles, industry groups
-- Reddit: Subreddit discussions, recommendation requests, problem-solving threads  
-- Crunchbase: Funding announcements, company growth stages
-- Clutch/Directories: Service provider searches, client reviews
-- GitHub: Technical projects, open source needs, developer tools
-- Forums: Q&A sites, community discussions, expert advice
-
-Create diverse dorks that find:
-- Active prospects currently seeking solutions
-- Companies with budget and decision-making authority  
-- Pain points and challenges in your service area
-- Competitor mentions and alternative solution searches
-- Project announcements and expansion plans
-- Technical discussions revealing needs
-
-CRITICAL: Return ONLY the search queries, one per line. No explanations, no markdown, no numbering, no code blocks.
-
-Make each dork highly specific to finding ${audience} in ${business} who need ${services} with ${budget} budget.`;
-
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [{ role: 'user', content: prompt }],
-      max_tokens: 800,
-      temperature: 0.8
-    });
-
-    const dorks = response.choices[0].message.content
-      .split('\n')
-      .map(d => d.trim())
-      .filter(d => d && !d.includes('```') && !d.match(/^\d+\.?\s/))
-      .slice(0, 12);
-
-    console.log('\n🔍 Generated Advanced Dorks:');
-    dorks.forEach((dork, i) => {
-      console.log(`${i + 1}. ${dork}`);
-    });
-
-    return dorks;
-  }
-
-  async generateTargetedKeywords(business, services, audience, budget, geography) {
-    const prompt = `Extract 8 highly specific, targeted keywords for advanced B2B lead generation:
-
-Business: ${business}
-Services: ${services}
-Audience: ${audience}
-Budget: ${budget}
-Geography: ${geography}
-
-Focus on:
-1. Industry-specific terminology
-2. Pain point keywords
-3. Solution-seeking phrases
-4. Budget/investment terms
-5. Company stage indicators
-6. Geographic modifiers
-7. Service-specific needs
-8. Decision-maker language
-
-Return one keyword/phrase per line, no formatting, no numbers.`;
-
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [{ role: 'user', content: prompt }],
-      max_tokens: 150,
-      temperature: 0.5
-    });
-
-    return response.choices[0].message.content
-      .split('\n')
-      .map(k => k.trim())
-      .filter(k => k)
-      .slice(0, 8);
-  }
-
-  async scrapeDorks(dorks) {
-    const results = [];
-    console.log(`\n🔍 Starting advanced scraping of ${dorks.length} dorks...\n`);
-
-    for (let i = 0; i < dorks.length; i++) {
-      const dork = dorks[i];
-      try {
-        console.log(`🔍 [${i + 1}/${dorks.length}] Searching: ${dork}`);
-        const url = `https://www.google.com/search?q=${encodeURIComponent(dork)}&num=20`;
-        
-        await this.page.goto(url, { timeout: 20000 });
-        await this.page.waitForTimeout(3000);
-        
-        // Enhanced wait for search results
-        try {
-          await this.page.waitForSelector('div.g, div.tF2Cxc, [data-ved]', { timeout: 8000 });
-        } catch (waitError) {
-          console.log('⚠️  Primary selectors not found, trying alternatives...');
-        }
-        
-        const html = await this.page.content();
-        if (html.includes('unusual traffic') || html.includes('detected unusual traffic')) {
-          console.log('⚠️  Rate limited detected, implementing longer delay...');
-          await this.page.waitForTimeout(15000);
-          continue;
-        }
-
-        // Enhanced result extraction with multiple fallback selectors
-        const found = await this.page.evaluate(() => {
-          const selectors = [
-            'div.tF2Cxc',
-            'div.g',
-            'div[data-ved]',
-            '.rc',
-            '.srg .g'
-          ];
-          
-          let results = [];
-          
-          for (const selector of selectors) {
-            const elements = document.querySelectorAll(selector);
-            if (elements.length > 0) {
-              results = Array.from(elements).map(el => {
-                const titleEl = el.querySelector('h3') || el.querySelector('a h3') || el.querySelector('.LC20lb');
-                const linkEl = el.querySelector('a') || el.querySelector('h3 a');
-                const snippetEl = el.querySelector('.VwiC3b') || el.querySelector('.IsZvec') || el.querySelector('.st') || el.querySelector('.s');
-                
-                const title = titleEl?.innerText?.trim() || '';
-                const url = linkEl?.href || '';
-                const snippet = snippetEl?.innerText?.trim() || '';
-                
-                return title && url && !url.includes('google.com') ? { title, url, snippet } : null;
-              }).filter(Boolean);
-              
-              if (results.length > 0) break;
-            }
-          }
-          
-          return results;
-        });
-
-        if (found.length > 0) {
-          console.log(`✅ Found ${found.length} results`);
-          
-          // Enhanced filename safety
-          const safeFilename = dork
-            .replace(/[^a-zA-Z0-9\s]/g, '_')
-            .replace(/\s+/g, '_')
-            .slice(0, 100);
-          
-          const resultText = found.map(r => 
-            `TITLE: ${r.title}\nURL: ${r.url}\nSNIPPET: ${r.snippet}\n${'='.repeat(80)}`
-          ).join('\n\n');
-          
-          fs.writeFileSync(
-            path.join(rawDir, `results_${safeFilename}.txt`), 
-            `SEARCH QUERY: ${dork}\nRESULTS: ${found.length}\nTIMESTAMP: ${new Date().toISOString()}\n\n${resultText}`
-          );
-          
-          results.push(...found);
-        } else {
-          console.log(`❌ No results found for: ${dork}`);
-        }
-
-        // Progressive delay increase for later searches
-        const delay = 2000 + Math.random() * 3000 + (i * 500);
-        await this.page.waitForTimeout(delay);
-        
-      } catch (error) {
-        console.log(`❌ Error processing dork: ${dork} - ${error.message}`);
+    try {
+      let raw = response.choices[0].message.content.trim();
+      if (raw.startsWith('```')) {
+        raw = raw.replace(/```(?:json)?/g, '').trim();
       }
+      return JSON.parse(raw);
+    } catch (error) {
+      console.error('Failed to parse AI response:', error.message);
+      console.error('AI raw response:', response.choices[0].message.content);
+      throw new Error('Invalid AI response format');
+    }
+  }
+
+  async processDork(dork, pageIndex) {
+    const page = this.pages[pageIndex];
+    const results = [];
+
+    try {
+      const url = `https://www.google.com/search?q=${encodeURIComponent(dork)}&num=20`;
+      await page.goto(url, { timeout: 30000 });
+      await page.waitForTimeout(2000);
+
+      const found = await page.evaluate(() => {
+        const elements = document.querySelectorAll('div.tF2Cxc, div.g');
+        return Array.from(elements).map(el => {
+          const titleEl = el.querySelector('h3');
+          const linkEl = el.querySelector('a');
+          const snippetEl = el.querySelector('.VwiC3b, .IsZvec');
+          
+          const title = titleEl?.innerText?.trim() || '';
+          const url = linkEl?.href || '';
+          const snippet = snippetEl?.innerText?.trim() || '';
+          
+          return title && url && !url.includes('google.com') ? { title, url, snippet } : null;
+        }).filter(Boolean);
+      });
+
+      results.push(...found);
+      await page.waitForTimeout(3000 + Math.random() * 2000);
+
+    } catch (error) {
+      console.error(`Error processing dork: ${dork}`, error.message);
     }
 
-    console.log(`\n📊 SCRAPING SUMMARY:`);
-    console.log(`Total results collected: ${results.length}`);
-    console.log(`Unique URLs found: ${new Set(results.map(r => r.url)).size}`);
-    
     return results;
   }
 
-  async scrapeDeep(urls, platforms) {
-    const uniqueUrls = [...new Set(urls)];
-    console.log(`\n🔍 Deep scraping ${uniqueUrls.length} unique URLs...\n`);
+  async filterRelevantResults(results, userInput, platforms) {
+    const prompt = `You are an expert lead qualifier. Filter and score the search results to identify the most promising leads across diverse platforms.
 
-    // Enhanced platform-specific scraping strategies
-    const platformScrapers = {
-      'linkedin': async (url, page) => {
-        const selectors = [
-          '[data-test-id="about-us-description"]',
-          '.org-about-company-module__description',
-          '.org-top-card-summary__tagline',
-          '.org-about-us-organization-description',
-          '.pv-text-details__left-panel',
-          '.pv-entity__summary-info'
-        ];
-        
-        for (const selector of selectors) {
-          try {
-            await page.waitForSelector(selector, { timeout: 3000 });
-            const content = await page.$eval(selector, el => el.innerText);
-            if (content.trim()) return content;
-          } catch (e) { continue; }
+User Requirements:
+Business: ${userInput.business}
+Services: ${userInput.services}
+Target Audience: ${userInput.audience}
+Budget: ${userInput.budget}
+Geography: ${userInput.geography}
+
+Search Results:
+${results.map((r, i) => `${i + 1}. TITLE: ${r.title}\nURL: ${r.url}\nSNIPPET: ${r.snippet}`).join('\n\n')}
+
+For each result, determine:
+1. Relevance score (0-10) - How likely is this to contain qualified leads?
+2. Lead potential - Does this show buying intent, decision-makers, or business needs?
+3. Should deep scrape? (true/false)
+
+Focus on:
+- Company pages with contact info potential
+- Decision-maker profiles  
+- Business discussions showing needs
+- Service provider searches
+- Funding/growth announcements
+- Job postings indicating budget/expansion
+- Ensure diversity by prioritizing results from different platforms (e.g., not just LinkedIn)
+
+Return JSON array with objects containing: { "index": number, "score": number, "reason": "string", "deepScrape": boolean }
+
+Only include results with score >= 6. Return only valid JSON.`;
+
+    const response = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 1500,
+      temperature: 0.3
+    });
+
+    try {
+      let raw = response.choices[0].message.content.trim();
+      if (raw.startsWith('```')) {
+        raw = raw.replace(/```(?:json)?/g, '').trim();
+      }
+      const filtered = JSON.parse(raw);
+      return filtered.filter(item => item.score >= 6 && item.deepScrape);
+    } catch (error) {
+      console.error('Failed to parse filter response:', error.message);
+      console.error('AI raw response:', response.choices[0].message.content);
+      return [];
+    }
+  }
+
+  async searchLinkedInProfile(name, company, role, pageIndex) {
+    const page = this.pages[pageIndex];
+    const linkedinUrls = [];
+
+    try {
+      // Step 1: Generate targeted search queries using LLM
+      const queryPrompt = `You are an expert in generating search queries for LinkedIn profiles. Based on the provided information, generate 2-3 precise Google search queries to find the correct LinkedIn profile.
+
+Person Name: ${name}
+Company: ${company || 'N/A'}
+Role: ${role || 'N/A'}
+Geography: ${this.userInput?.geography || 'N/A'}
+Business Context: ${this.userInput?.business || 'N/A'}, targeting ${this.userInput?.audience || 'N/A'}
+
+Generate queries that:
+- Use site:linkedin.com/in/ to target individual LinkedIn profiles
+- Handle variations of the name (e.g., full name, initials, common misspellings)
+- Incorporate company name or aliases if available
+- Include role or synonyms (e.g., "CEO" or "Chief Executive")
+- Add geography if relevant
+- Exclude login pages, company pages (linkedin.com/company/), or irrelevant results
+
+Return a JSON array of 2-3 query strings. Example:
+["site:linkedin.com/in/ \"John Doe\" \"Acme Corp\" CEO", "site:linkedin.com/in/ \"J. Doe\" \"Acme Corporation\" \"Chief Executive\""]
+
+Return only valid JSON.`;
+
+      const queryResponse = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: [{ role: 'user', content: queryPrompt }],
+        max_tokens: 150,
+        temperature: 0.5
+      });
+
+      let queries;
+      try {
+        let raw = queryResponse.choices[0].message.content.trim();
+        if (raw.startsWith('```')) {
+          raw = raw.replace(/```(?:json)?/g, '').trim();
         }
-        return await page.evaluate(() => document.body.innerText);
-      },
-      
-      'reddit': async (url, page) => {
-        return await page.evaluate(() => {
-          const post = document.querySelector('[data-testid="post-content"]') || 
-                       document.querySelector('.Post') ||
-                       document.querySelector('._3xX726aBn29LDbsDtzr_6E');
-          return post ? post.innerText : document.body.innerText;
+        queries = JSON.parse(raw);
+      } catch (error) {
+        console.error('Failed to parse query response:', error.message);
+        queries = [`site:linkedin.com/in/ "${name}" ${company ? `"${company}"` : ''} ${role || ''}`.trim()];
+      }
+
+      console.log(`🔍 Searching LinkedIn profile for ${name} with queries: ${queries.join('; ')}`);
+
+      // Step 2: Scrape Google search results for each query
+      const searchResults = [];
+      for (const query of queries) {
+        const url = `https://www.google.com/search?q=${encodeURIComponent(query)}&num=10`;
+        await page.goto(url, { timeout: 30000 });
+        await page.waitForTimeout(2000);
+
+        const results = await page.evaluate(() => {
+          const elements = document.querySelectorAll('div.tF2Cxc, div.g');
+          return Array.from(elements).map(el => {
+            const titleEl = el.querySelector('h3');
+            const linkEl = el.querySelector('a');
+            const snippetEl = el.querySelector('.VwiC3b, .IsZvec');
+            
+            const title = titleEl?.innerText?.trim() || '';
+            const url = linkEl?.href || '';
+            const snippet = snippetEl?.innerText?.trim() || '';
+            
+            return url.includes('linkedin.com/in/') ? { title, url, snippet } : null;
+          }).filter(Boolean);
         });
-      },
+
+        searchResults.push(...results);
+        await page.waitForTimeout(2000 + Math.random() * 1000);
+      }
+
+      // Remove duplicates by URL
+      const uniqueResults = Array.from(new Map(searchResults.map(item => [item.url, item])).values());
+
+      // Step 3: Filter results using LLM
+      const filterPrompt = `You are an expert in identifying relevant LinkedIn profiles. Given a list of Google search results, select the most relevant LinkedIn profile URLs for the specified person.
+
+Person Name: ${name}
+Company: ${company || 'N/A'}
+Role: ${role || 'N/A'}
+Geography: ${this.userInput?.geography || 'N/A'}
+Business Context: ${this.userInput?.business || 'N/A'}, targeting ${this.userInput?.audience || 'N/A'}
+
+Search Results:
+${uniqueResults.map((r, i) => `${i + 1}. TITLE: ${r.title}\nURL: ${r.url}\nSNIPPET: ${r.snippet}`).join('\n\n')}
+
+For each result, determine:
+- Relevance score (0-10): How likely is this the correct LinkedIn profile for the person?
+- Reason: Brief explanation of the score
+
+Focus on:
+- Matching name (allowing for variations or initials)
+- Matching company or industry
+- Matching role or similar titles
+- Geographic relevance if applicable
+- Exclude company pages (linkedin.com/company/), login pages, or irrelevant profiles
+
+Return a JSON array of objects with: { "url": string, "score": number, "reason": string }
+Include only results with score >= 7. If no results meet this threshold, return an empty array.
+Return only valid JSON.`;
+
+      const filterResponse = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: [{ role: 'user', content: filterPrompt }],
+        max_tokens: 500,
+        temperature: 0.3
+      });
+
+      let filteredResults;
+      try {
+        let raw = filterResponse.choices[0].message.content.trim();
+        if (raw.startsWith('```')) {
+          raw = raw.replace(/```(?:json)?/g, '').trim();
+        }
+        filteredResults = JSON.parse(raw);
+      } catch (error) {
+        console.error('Failed to parse filter response:', error.message);
+        console.error('AI raw response:', filterResponse.choices[0].message.content);
+        return [];
+      }
+
+      // Sort by score and take top results (up to 2)
+      const topResults = filteredResults
+        .filter(result => result.score >= 7)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 2)
+        .map(result => result.url);
+
+      console.log(`✅ Found ${topResults.length} relevant LinkedIn profiles for ${name}`);
+
+      return topResults;
+    } catch (error) {
+      console.error(`Error searching LinkedIn profile for ${name}:`, error.message);
+      return [];
+    }
+  }
+
+  async deepScrape(url, pageIndex) {
+    const page = this.pages[pageIndex];
+    
+    try {
+      await page.goto(url, { timeout: 30000 });
+      await page.waitForTimeout(2000);
       
-      'crunchbase': async (url, page) => {
-        const selectors = [
-          '[data-testid="description"]',
-          '.description',
-          '.cb-card',
-          '.profile-section'
+      const scrapedData = await page.evaluate(() => {
+        document.querySelectorAll('script, style, nav, footer, header, .ads, .cookie-banner').forEach(el => el.remove());
+        
+        const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+        const emails = [...new Set(document.body.innerText.match(emailRegex) || [])];
+        
+        const phoneRegex = /(?:\+?1[-.\s]?)?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}/g;
+        const phones = [...new Set(document.body.innerText.match(phoneRegex) || [])];
+        
+        const linkedinRegex = /https?:\/\/(?:www\.)?linkedin\.com\/(?:in|company)\/[a-zA-Z0-9-]+/g;
+        const linkedinUrls = [...new Set(document.body.innerHTML.match(linkedinRegex) || [])];
+        
+        const websiteRegex = /https?:\/\/(?:www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(?:\/[^\s]*)?/g;
+        const websites = [...new Set(document.body.innerHTML.match(websiteRegex) || [])]
+          .filter(url => !url.includes('linkedin.com') && !url.includes('facebook.com') && !url.includes('twitter.com'));
+        
+        let platformData = {};
+        const hostname = window.location.hostname;
+        
+        if (hostname.includes('linkedin.com')) {
+          platformData = {
+            type: 'linkedin',
+            companyName: document.querySelector('h1')?.innerText?.trim() || '',
+            followers: document.querySelector('.org-top-card-summary__follower-count')?.innerText?.trim() || '',
+            industry: document.querySelector('.org-top-card-summary__industry')?.innerText?.trim() || '',
+            description: document.querySelector('.org-about-company-module__description')?.innerText?.trim() || ''
+          };
+        } else if (hostname.includes('crunchbase.com')) {
+          platformData = {
+            type: 'crunchbase',
+            companyName: document.querySelector('h1')?.innerText?.trim() || '',
+            funding: document.querySelector('[data-testid="funding-rounds"]')?.innerText?.trim() || '',
+            employees: document.querySelector('[data-testid="employees"]')?.innerText?.trim() || ''
+          };
+        } else if (hostname.includes('clutch.co')) {
+          platformData = {
+            type: 'clutch',
+            companyName: document.querySelector('.company_name')?.innerText?.trim() || '',
+            rating: document.querySelector('.rating')?.innerText?.trim() || '',
+            reviews: document.querySelector('.reviews-count')?.innerText?.trim() || '',
+            description: document.querySelector('.company_description')?.innerText?.trim() || ''
+          };
+        } else if (hostname.includes('g2.com')) {
+          platformData = {
+            type: 'g2',
+            companyName: document.querySelector('.company-name')?.innerText?.trim() || '',
+            rating: document.querySelector('.rating-score')?.innerText?.trim() || '',
+            category: document.querySelector('.category')?.innerText?.trim() || ''
+          };
+        } else if (hostname.includes('reddit.com')) {
+          platformData = {
+            type: 'reddit',
+            title: document.querySelector('h1')?.innerText?.trim() || '',
+            subreddit: document.querySelector('.subreddit-name')?.innerText?.trim() || '',
+            author: document.querySelector('.author')?.innerText?.trim() || ''
+          };
+        }
+        
+        const contentSelectors = [
+          'main', 'article', '.content', '.post', '.profile',
+          '.company-description', '.about', '.bio', '.description'
         ];
         
-        for (const selector of selectors) {
-          try {
-            const content = await page.$eval(selector, el => el.innerText);
-            if (content.trim()) return content;
-          } catch (e) { continue; }
+        let mainContent = '';
+        for (const selector of contentSelectors) {
+          const element = document.querySelector(selector);
+          if (element) {
+            mainContent = element.innerText.trim();
+            break;
+          }
         }
-        return await page.evaluate(() => document.body.innerText);
+        
+        if (!mainContent) {
+          mainContent = document.body.innerText.trim();
+        }
+        
+        const peopleRegex = /(?:CEO|CTO|Founder|Director|Manager|VP|President|Owner|Contact|Head of)\s+([A-Z][a-z]+\s+[A-Z][a-z]+)/gi;
+        const people = [...new Set(mainContent.match(peopleRegex) || [])];
+        
+        return {
+          content: mainContent.substring(0, 5000),
+          emails,
+          phones,
+          linkedinUrls,
+          websites: websites.slice(0, 5),
+          people,
+          platformData,
+          title: document.title,
+          meta: {
+            description: document.querySelector('meta[name="description"]')?.content || '',
+            keywords: document.querySelector('meta[name="keywords"]')?.content || ''
+          }
+        };
+      });
+
+      return scrapedData;
+    } catch (error) {
+      console.error(`Failed to scrape ${url}:`, error.message);
+      return null;
+    }
+  }
+
+  async extractLeadInfo(scrapedData, url, userInput, pageIndex) {
+    if (!scrapedData) return null;
+
+    const cleanEmails = scrapedData.emails.filter(email =>
+      email.includes('@') && !email.includes('example.com') && !email.includes('test.com')
+    );
+
+    const cleanPhones = scrapedData.phones.filter(phone =>
+      phone.replace(/\D/g, '').length >= 10
+    );
+
+    // Trigger LinkedIn profile search if minimal contact info is found
+    let additionalLinkedInUrls = [];
+    if (cleanEmails.length === 0 && cleanPhones.length === 0 && scrapedData.people.length > 0) {
+      console.log(`🔍 No contact info found for ${url}. Searching LinkedIn profiles...`);
+      for (const person of scrapedData.people) {
+        const nameMatch = person.match(/([A-Z][a-z]+\s+[A-Z][a-z]+)/);
+        if (nameMatch) {
+          const name = nameMatch[0];
+          const role = person.replace(name, '').trim();
+          const company = scrapedData.platformData.companyName || scrapedData.title.split(' ')[0];
+          const linkedinUrls = await this.searchLinkedInProfile(name, company, role, pageIndex);
+          additionalLinkedInUrls.push(...linkedinUrls);
+        }
+      }
+      scrapedData.linkedinUrls.push(...additionalLinkedInUrls);
+    }
+
+    const prompt = `Extract and enhance lead information from this scraped data. BE GENEROUS - extract leads even with minimal information.
+
+SCRAPED DATA:
+Content: ${scrapedData.content}
+Title: ${scrapedData.title}
+Meta Description: ${scrapedData.meta.description}
+Platform: ${scrapedData.platformData.type || 'website'}
+Found Emails: ${cleanEmails.join(', ')}
+Found Phones: ${cleanPhones.join(', ')}
+Found LinkedIn: ${scrapedData.linkedinUrls.join(', ')}
+Found Websites: ${scrapedData.websites.join(', ')}
+People Mentioned: ${scrapedData.people.join(', ')}
+
+URL: ${url}
+Looking for: ${userInput.audience} who need ${userInput.services}
+Business Type: ${userInput.business}
+
+IMPORTANT: Extract leads even if contact info is minimal. We can follow up later to find more details.
+
+Extract and return JSON with:
+{
+  "company": "Company name (even if just from URL or title)",
+  "contact_info": {
+    "emails": ${JSON.stringify(cleanEmails)},
+    "phones": ${JSON.stringify(cleanPhones)},
+    "website": "main website url (even if just the scraped URL)",
+    "linkedin": "company/person linkedin url",
+    "social": ["other social media urls"]
+  },
+  "key_people": [
+    {
+      "name": "Person name (even if just from title or LinkedIn)",
+      "title": "Job title (infer from context if needed)", 
+      "email": "email if available",
+      "linkedin": "linkedin url if available"
+    }
+  ],
+  "business_info": {
+    "industry": "Industry (infer from context)",
+    "size": "Company size (estimate if needed)",
+    "location": "Location (from content or ${userInput.geography})",
+    "funding": "Funding status if available",
+    "stage": "startup/growth/enterprise (estimate)"
+  },
+  "pain_points": ["inferred pain point based on industry/content"],
+  "buying_signals": ["potential signals even if weak"],
+  "lead_score": "Rate 1-10 (be generous, minimum 4 for any valid company)",
+  "pitch_angle": "Tailored pitch suggestion"
+}
+
+ALWAYS return a lead if you can identify ANY company name, person name, or business context. 
+If information is missing, make reasonable assumptions based on industry standards.
+Return null only if absolutely no business context can be found.
+Return only valid JSON.`;
+
+    const response = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 1200,
+      temperature: 0.2
+    });
+
+    try {
+      let raw = response.choices[0].message.content.trim();
+      if (raw.startsWith('```')) {
+        raw = raw.replace(/```(?:json)?/g, '').trim();
+      }
+
+      const leadInfo = JSON.parse(raw);
+
+      if (leadInfo && (leadInfo.company || (leadInfo.key_people && leadInfo.key_people.length > 0))) {
+        leadInfo.raw_data = {
+          platform: scrapedData.platformData.type || 'website',
+          title: scrapedData.title,
+          meta: scrapedData.meta,
+          all_emails: cleanEmails,
+          all_phones: cleanPhones,
+          all_linkedin: scrapedData.linkedinUrls,
+          all_websites: scrapedData.websites,
+          scraped_at: new Date().toISOString()
+        };
+        return leadInfo;
+      }
+      
+      return null;
+    } catch (error) {
+      console.error('Failed to parse lead info:', error.message);
+      console.error('AI raw response:', response.choices[0].message.content);
+      return null;
+    }
+  }
+
+  async processAllDorks(dorks) {
+    console.log(`\n🔍 Processing ${dorks.length} search queries in parallel...`);
+    
+    const dorkPromises = dorks.map(async (dork, index) => {
+      while (this.pageQueue.length === 0) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+      
+      const pageIndex = this.getAvailablePage();
+      console.log(`🔍 Processing query ${index + 1}/${dorks.length} on tab ${pageIndex + 1}: ${dork}`);
+      
+      try {
+        const results = await this.processDork(dork, pageIndex);
+        console.log(`✅ Query ${index + 1} completed: ${results.length} results`);
+        return results;
+      } finally {
+        this.releasePage(pageIndex);
+      }
+    });
+
+    const allResultsArrays = await Promise.all(dorkPromises);
+    const allResults = allResultsArrays.flat();
+    
+    console.log(`\n📊 Total results collected: ${allResults.length}`);
+    return allResults;
+  }
+
+  async processDeepScraping(relevantResults, allResults, userInput) {
+    console.log('\n📄 Deep scraping and extracting lead information in parallel...');
+    
+    const scrapingPromises = relevantResults.map(async (result, index) => {
+      while (this.pageQueue.length === 0) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+      
+      const pageIndex = this.getAvailablePage();
+      const originalResult = allResults[result.index];
+      
+      console.log(`📄 Scraping ${index + 1}/${relevantResults.length} on tab ${pageIndex + 1}: ${originalResult.url}`);
+      
+      try {
+        const scrapedData = await this.deepScrape(originalResult.url, pageIndex);
+        if (scrapedData) {
+          const leadInfo = await this.extractLeadInfo(scrapedData, originalResult.url, userInput, pageIndex);
+          if (leadInfo) {
+            const leadFileName = `lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}_${leadInfo.company?.replace(/[^a-zA-Z0-9]/g, '_') || 'unknown'}.json`;
+            fs.writeFileSync(
+              path.join(this.deepDir, leadFileName),
+              JSON.stringify({
+                source: originalResult,
+                leadInfo,
+                scrapedData,
+                score: result.score,
+                reason: result.reason
+              }, null, 2)
+            );
+            
+            console.log(`✅ Lead extracted: ${leadInfo.company || 'Unknown Company'}`);
+            
+            return {
+              source: originalResult,
+              leadInfo,
+              score: result.score,
+              reason: result.reason
+            };
+          } else {
+            console.log(`⚠️ No lead info extracted from: ${originalResult.url}`);
+          }
+        } else {
+          console.log(`⚠️ No scraped data from: ${originalResult.url}`);
+        }
+        return null;
+      } catch (error) {
+        console.error(`❌ Error scraping ${originalResult.url}:`, error.message);
+        return null;
+      } finally {
+        this.releasePage(pageIndex);
+      }
+    });
+
+    const results = await Promise.all(scrapingPromises);
+    const validLeads = results.filter(Boolean);
+    
+    console.log(`\n📊 Deep scraping completed:`);
+    console.log(`- Total URLs scraped: ${relevantResults.length}`);
+    console.log(`- Successful extractions: ${validLeads.length}`);
+    console.log(`- Success rate: ${((validLeads.length / relevantResults.length) * 100).toFixed(1)}%`);
+    
+    return validLeads;
+  }
+
+  async processLeads(dorks, userInput, platforms) {
+    const allResults = await this.processAllDorks(dorks);
+    
+    console.log('\n🎯 Filtering relevant results...');
+    let relevantResults = await this.filterRelevantResults(allResults, userInput, platforms);
+    console.log(`Selected ${relevantResults.length} high-quality results for deep scraping`);
+
+    if (relevantResults.length < 20) {
+      console.log('\n🔄 Adding fallback results to increase lead volume...');
+      
+      const usedIndices = new Set(relevantResults.map(r => r.index));
+      const remainingResults = allResults
+        .map((result, index) => ({ result, index }))
+        .filter(({ index }) => !usedIndices.has(index))
+        .filter(({ result }) => {
+          const url = result.url.toLowerCase();
+          const title = result.title.toLowerCase();
+          return (
+            platforms.some(platform => url.includes(platform)) &&
+            (
+              title.includes('ceo') ||
+              title.includes('founder') ||
+              title.includes('director') ||
+              title.includes('manager') ||
+              title.includes('company') ||
+              title.includes('startup') ||
+              title.includes('business') ||
+              title.includes('review') ||
+              title.includes('profile')
+            )
+          );
+        })
+        .slice(0, 30)
+        .map(({ index }) => ({
+          index,
+          score: 4,
+          reason: 'Fallback selection - potential company/profile page detected',
+          deepScrape: true
+        }));
+      
+      relevantResults.push(...remainingResults);
+      console.log(`Added ${remainingResults.length} fallback results. Total: ${relevantResults.length}`);
+    }
+
+    const qualifiedLeads = await this.processDeepScraping(relevantResults, allResults, userInput);
+    return qualifiedLeads;
+  }
+
+  async generateReport(leads, userInput, strategy) {
+    const report = {
+      campaign: {
+        business: userInput.business,
+        services: userInput.services,
+        audience: userInput.audience,
+        timestamp: new Date().toISOString()
+      },
+      strategy: {
+        platforms: strategy.platforms,
+        keywords: strategy.keywords,
+        dorks_used: strategy.dorks.length
+      },
+      results: {
+        total_leads: leads.length,
+        leads: leads
       }
     };
 
-    for (let i = 0; i < uniqueUrls.length; i++) {
-      const url = uniqueUrls[i];
-      try {
-        console.log(`📄 [${i + 1}/${uniqueUrls.length}] Scraping: ${url}`);
-        
-        await this.page.goto(url, { timeout: 20000 });
-        await this.page.waitForTimeout(4000);
-        
-        // Determine platform and use appropriate scraper
-        const platform = platforms.find(p => url.includes(p));
-        let content = '';
-        
-        if (platform && platformScrapers[platform]) {
-          content = await platformScrapers[platform](url, this.page);
-        } else {
-          content = await this.page.evaluate(() => {
-            // Remove script and style content
-            const scripts = document.querySelectorAll('script, style, nav, footer, header');
-            scripts.forEach(el => el.remove());
-            
-            const main = document.querySelector('main') || 
-                         document.querySelector('article') || 
-                         document.querySelector('.content') ||
-                         document.body;
-            
-            return main.innerText;
-          });
-        }
-        
-        if (content.trim()) {
-          const safeFilename = url
-            .replace(/[^a-zA-Z0-9]/g, '_')
-            .slice(0, 100);
-          
-          const fullContent = `URL: ${url}\nPLATFORM: ${platform || 'unknown'}\nSCRAPED: ${new Date().toISOString()}\n\n${content}`;
-          
-          fs.writeFileSync(
-            path.join(deepDir, `deep_${safeFilename}.txt`), 
-            fullContent
-          );
-          
-          console.log(`✅ Saved: ${url.substring(0, 60)}...`);
-        }
-        
-        // Respectful delay
-        await this.page.waitForTimeout(4000 + Math.random() * 3000);
-        
-      } catch (error) {
-        console.log(`❌ Failed to scrape: ${url} - ${error.message}`);
-      }
-    }
-  }
+    fs.writeFileSync(
+      path.join(this.resultsDir, 'lead_generation_report.json'),
+      JSON.stringify(report, null, 2)
+    );
 
-  async filterRelevantUrls(results, platforms) {
-    console.log('\n📊 Filtering and prioritizing URLs...');
+    const csvRows = leads.map(lead => ({
+      Company: lead.leadInfo.company || 'N/A',
+      Email: lead.leadInfo.contact_info?.emails?.[0] || 'N/A',
+      Phone: lead.leadInfo.contact_info?.phones?.[0] || 'N/A',
+      Website: lead.leadInfo.contact_info?.website || 'N/A',
+      Key_Person: lead.leadInfo.key_people?.[0]?.name || 'N/A',
+      Title: lead.leadInfo.key_people?.[0]?.title || 'N/A',
+      Industry: lead.leadInfo.business_info?.industry || 'N/A',
+      Location: lead.leadInfo.business_info?.location || 'N/A',
+      Pain_Points: lead.leadInfo.pain_points?.join('; ') || 'N/A',
+      Pitch_Angle: lead.leadInfo.pitch_angle || 'N/A',
+      Source_URL: lead.source.url,
+      Score: lead.score
+    }));
+
+    const csvContent = [
+      Object.keys(csvRows[0]).join(','),
+      ...csvRows.map(row => Object.values(row).map(v => `"${v}"`).join(','))
+    ].join('\n');
+
+    fs.writeFileSync(path.join(this.resultsDir, 'leads.csv'), csvContent);
     
-    // Enhanced URL filtering with scoring
-    const scoredUrls = results.map(result => {
-      let score = 0;
-      const url = result.url.toLowerCase();
-      
-      // Platform relevance scoring
-      platforms.forEach(platform => {
-        if (url.includes(platform)) score += 10;
-      });
-      
-      // High-value domains
-      const highValueDomains = [
-        'linkedin.com/company', 'linkedin.com/in',
-        'crunchbase.com', 'angel.co', 'wellfound.com',
-        'clutch.co', 'ycombinator.com', 'indiehackers.com',
-        'reddit.com/r/', 'github.com', 'stackoverflow.com',
-        'producthunt.com', 'betalist.com'
-      ];
-      
-      highValueDomains.forEach(domain => {
-        if (url.includes(domain)) score += 5;
-      });
-      
-      // Content quality indicators
-      const title = result.title.toLowerCase();
-      const snippet = result.snippet.toLowerCase();
-      const content = `${title} ${snippet}`;
-      
-      // Intent signals
-      const intentSignals = [
-        'looking for', 'need', 'seeking', 'hiring', 'budget',
-        'startup', 'founder', 'ceo', 'director', 'manager'
-      ];
-      
-      intentSignals.forEach(signal => {
-        if (content.includes(signal)) score += 3;
-      });
-      
-      return { ...result, score };
-    });
-    
-    // Sort by score and return top URLs
-    const topUrls = scoredUrls
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 50) // Limit to top 50 for deep scraping
-      .map(item => item.url);
-    
-    console.log(`Selected ${topUrls.length} high-priority URLs for deep scraping`);
-    return topUrls;
-  }
-
-  async generateSummaryReport(business, services, audience, platforms, totalResults) {
-    const reportContent = `
-# Lead Generation Campaign Report
-
-## Campaign Configuration
-- **Business Type**: ${business}
-- **Services Offered**: ${services}
-- **Target Audience**: ${audience}
-- **Selected Platforms**: ${platforms.join(', ')}
-- **Generated**: ${new Date().toISOString()}
-
-## Results Summary
-- **Total Results Collected**: ${totalResults}
-- **Platforms Targeted**: ${platforms.length}
-- **Files Generated**: Check 'raw' and 'deepscrape' directories
-
-## Next Steps
-1. Review scraped content in the 'deepscrape' directory
-2. Extract contact information and company details
-3. Qualify leads based on your criteria
-4. Create targeted outreach campaigns
-5. Track engagement and conversion metrics
-
-## File Structure
-- \`raw/\`: Initial search results organized by query
-- \`deepscrape/\`: Detailed page content from priority URLs
-    `;
-
-    fs.writeFileSync(path.join(__dirname, 'lead_generation_report.md'), reportContent);
-    console.log('\n📋 Summary report generated: lead_generation_report.md');
+    console.log('\n📋 Reports generated:');
+    console.log('- lead_generation_report.json: Detailed JSON report');
+    console.log('- leads.csv: CSV for easy import');
+    console.log(`\n🎯 Found ${leads.length} qualified leads`);
   }
 
   async close() {
-    await this.browser.close();
+    if (this.browser) {
+      await this.browser.close();
+    }
   }
 }
 
-// Main execution function
-async function runDynamicLeadGeneration() {
-  const generator = new DynamicLeadGenerator();
+async function main() {
+  const generator = new SmartLeadGenerator();
   
   try {
-    console.log('🚀 Initializing Dynamic Lead Generator...');
     await generator.init();
     
-    // Get user requirements
     const userInput = await generator.getUserInput();
-    console.log('\n✅ User input collected successfully');
+    console.log('\n🎯 Generating smart search strategy...');
     
-    // Generate targeted keywords
-    console.log('\n🔍 Generating targeted keywords...');
-    const keywords = await generator.generateTargetedKeywords(
-      userInput.business, 
-      userInput.services, 
-      userInput.audience, 
-      userInput.budget, 
-      userInput.geography
-    );
-    console.log('Keywords generated:', keywords.join(', '));
+    const strategy = await generator.generateSearchStrategy(userInput);
+    console.log(`\n📊 Strategy generated:`);
+    console.log(`- Platforms: ${strategy.platforms.join(', ')}`);
+    console.log(`- Keywords: ${strategy.keywords.join(', ')}`);
+    console.log(`- Search queries: ${strategy.dorks.length}`);
     
-    // Analyze and select best platforms
-    console.log('\n🎯 Analyzing optimal platforms...');
-    const platforms = await generator.analyzeBestPlatforms(
-      userInput.business, 
-      userInput.services, 
-      userInput.audience, 
-      userInput.budget, 
-      userInput.geography
-    );
+    const leads = await generator.processLeads(strategy.dorks, userInput, strategy.platforms);
     
-    // Generate advanced dorks
-    console.log('\n🔍 Generating advanced Google dorks...');
-    const dorks = await generator.generateAdvancedDorks(
-      userInput.business, 
-      userInput.services, 
-      userInput.audience, 
-      userInput.budget, 
-      userInput.geography, 
-      platforms
-    );
-    
-    // Execute dorking campaign
-    console.log('\n🚀 Executing dorking campaign...');
-    const results = await generator.scrapeDorks(dorks);
-    
-    // Filter and prioritize URLs
-    const relevantUrls = await generator.filterRelevantUrls(results, platforms);
-    
-    // Deep scrape priority URLs
-    if (relevantUrls.length > 0) {
-      console.log('\n📊 Starting deep scraping of priority URLs...');
-      await generator.scrapeDeep(relevantUrls, platforms);
+    if (leads.length > 0) {
+      await generator.generateReport(leads, userInput, strategy);
+    } else {
+      console.log('\n❌ No qualified leads found. Try adjusting your search criteria.');
     }
     
-    // Generate summary report
-    await generator.generateSummaryReport(
-      userInput.business, 
-      userInput.services, 
-      userInput.audience, 
-      platforms, 
-      results.length
-    );
-    
-    console.log('\n🎉 Dynamic lead generation campaign completed successfully!');
-    console.log('\n📁 Check the following directories for results:');
-    console.log('   - raw/: Initial search results');
-    console.log('   - deepscrape/: Detailed page content');
-    console.log('   - lead_generation_report.md: Campaign summary');
-    
   } catch (error) {
-    console.error('❌ Error during lead generation:', error);
+    console.error('❌ Error:', error);
   } finally {
     await generator.close();
   }
 }
 
-// Run the dynamic lead generation
-runDynamicLeadGeneration().catch(console.error);
+main().catch(console.error);
