@@ -1,28 +1,20 @@
+// working
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const { OpenAI } = require('openai');
-const readline = require('readline');
 require('dotenv').config();
 
 const openai = new OpenAI({ apiKey: process.env.OpenAI_API_KEY });
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-const ask = (question) => new Promise(resolve => rl.question(question, resolve));
 
 class SmartLeadGenerator {
   constructor() {
     this.browser = null;
     this.pages = [];
-    this.maxTabs = 5;
+    this.maxTabs = 2;
     this.resultsDir = path.join(__dirname, 'leads');
     this.deepDir = path.join(__dirname, 'detailed_leads');
     this.pageQueue = [];
-    this.userInput = null; // Store userInput for access in searchLinkedInProfile
     
     if (!fs.existsSync(this.resultsDir)) fs.mkdirSync(this.resultsDir);
     if (!fs.existsSync(this.deepDir)) fs.mkdirSync(this.deepDir);
@@ -33,13 +25,33 @@ class SmartLeadGenerator {
     this.browser = await chromium.launchPersistentContext('D:/Projects/chrome-profile-copy', {
       headless: false,
       executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-      ignoreDefaultArgs: ['--enable-automation']
+      ignoreDefaultArgs: ['--enable-automation'],
+      // Browser fingerprinting
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+      viewport: { width: 1920, height: 1080 },
+      deviceScaleFactor: 1,
+      hasTouch: false,
+      defaultBrowserType: 'chromium'
     });
 
     for (let i = 0; i < this.maxTabs; i++) {
       const page = await this.browser.newPage();
+      // Set stealth headers
+      await page.setExtraHTTPHeaders({
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-User': '?1',
+        'Sec-Fetch-Dest': 'document'
+      });
+      // Remove webdriver flags
       await page.addInitScript(() => {
-        Object.defineProperty(navigator, 'webdriver', { get: () => false });
+        Object.defineProperty(navigator, 'webdriver', {
+          get: () => undefined
+        });
       });
       this.pages.push(page);
       this.pageQueue.push(i);
@@ -54,20 +66,24 @@ class SmartLeadGenerator {
     this.pageQueue.push(pageIndex);
   }
 
-  async getUserInput() {
-    const business = await ask('Business type: ');
-    const services = await ask('Services offered: ');
-    const audience = await ask('Target audience: ');
-    const budget = await ask('Budget range: ');
-    const geography = await ask('Geography: ');
-    
-    rl.close();
-    this.userInput = { business, services, audience, budget, geography }; // Store userInput
-    return this.userInput;
-  }
-
   async generateSearchStrategy(userInput) {
-    const prompt = `You are an expert lead generation strategist. Based on the business requirements, generate a comprehensive search strategy with a balanced distribution across multiple platforms.
+    let platformSection;
+    if (userInput.platforms && userInput.platforms.length > 0) {
+        const platformList = JSON.stringify(userInput.platforms);
+        platformSection = `
+1. "platforms": The user has specified to ONLY use these platforms: ${platformList}.
+2. "keywords": Array of 8-10 targeted keywords/phrases.
+3. "dorks": Array of 12-15 advanced Google search dorks using ONLY the platforms listed above. Every dork MUST start with "site:PLATFORM_DOMAIN" from the list ${platformList}.
+`
+    } else {
+        platformSection = `
+1. "platforms": Array of 8-10 diverse platforms/websites for finding leads (e.g., "linkedin.com", "crunchbase.com", "clutch.co", "reddit.com", "indiehackers.com", "angel.co", "producthunt.com", "ycombinator.com", "betalist.com", "capterra.com", "g2.com", "quora.com"). Ensure no single platform (e.g., LinkedIn) dominates; include at least 3 non-LinkedIn platforms relevant to the business type and audience.
+2. "keywords": Array of 8-10 targeted keywords/phrases tailored to the services and audience.
+3. "dorks": Array of 12-15 advanced Google search dorks using the platforms and keywords, with balanced representation across platforms.
+`
+    }
+
+    const prompt = `You are an expert lead generation strategist. Based on the business requirements, generate a comprehensive search strategy.
 
 Business: ${userInput.business}
 Services: ${userInput.services}  
@@ -76,13 +92,11 @@ Budget: ${userInput.budget}
 Geography: ${userInput.geography}
 
 Generate a JSON response with:
-1. "platforms": Array of 8-10 diverse platforms/websites for finding leads (e.g., "linkedin.com", "crunchbase.com", "clutch.co", "reddit.com", "indiehackers.com", "angel.co", "producthunt.com", "ycombinator.com", "betalist.com", "capterra.com", "g2.com", "quora.com"). Ensure no single platform (e.g., LinkedIn) dominates; include at least 3 non-LinkedIn platforms relevant to the business type and audience.
-2. "keywords": Array of 8-10 targeted keywords/phrases tailored to the services and audience.
-3. "dorks": Array of 12-15 advanced Google search dorks using the platforms and keywords, with balanced representation across platforms.
+${platformSection}
 
-Focus on platforms where decision-makers discuss needs or seek services. Avoid GitHub, StackOverflow. Ensure dorks are specific to finding active prospects with buying intent, and distribute them evenly across the selected platforms.
+Focus on platforms where decision-makers discuss needs or seek services. Avoid GitHub, StackOverflow. Ensure dorks are specific to finding active prospects with buying intent.
 
-Return only valid JSON.`;
+Return only valid JSON.`
 
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -110,8 +124,14 @@ Return only valid JSON.`;
 
     try {
       const url = `https://www.google.com/search?q=${encodeURIComponent(dork)}&num=20`;
-      await page.goto(url, { timeout: 30000 });
-      await page.waitForTimeout(2000);
+      // Simulate human-like mouse movement before navigation
+      await page.mouse.move(100, 100, { steps: 10 });
+      await page.mouse.move(200, 200, { steps: 10 });
+      // Go to the URL and wait until the network is idle
+      await page.goto(url, { timeout: 60000, waitUntil: 'networkidle0' });
+
+      // Add random delay to simulate human behavior
+      await page.waitForTimeout(Math.random() * 2000 + 1000);
 
       const found = await page.evaluate(() => {
         const elements = document.querySelectorAll('div.tF2Cxc, div.g');
@@ -129,7 +149,8 @@ Return only valid JSON.`;
       });
 
       results.push(...found);
-      await page.waitForTimeout(3000 + Math.random() * 2000);
+      // Add random delay after processing
+      await page.waitForTimeout(Math.random() * 2000 + 1000);
 
     } catch (error) {
       console.error(`Error processing dork: ${dork}`, error.message);
@@ -167,7 +188,7 @@ Focus on:
 
 Return JSON array with objects containing: { "index": number, "score": number, "reason": "string", "deepScrape": boolean }
 
-Only include results with score >= 6. Return only valid JSON.`;
+Only include results with score >= 6. Return only valid JSON.`
 
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -190,7 +211,7 @@ Only include results with score >= 6. Return only valid JSON.`;
     }
   }
 
-  async searchLinkedInProfile(name, company, role, pageIndex) {
+  async searchLinkedInProfile(name, company, role, pageIndex, userInput) {
     const page = this.pages[pageIndex];
     const linkedinUrls = [];
 
@@ -201,8 +222,8 @@ Only include results with score >= 6. Return only valid JSON.`;
 Person Name: ${name}
 Company: ${company || 'N/A'}
 Role: ${role || 'N/A'}
-Geography: ${this.userInput?.geography || 'N/A'}
-Business Context: ${this.userInput?.business || 'N/A'}, targeting ${this.userInput?.audience || 'N/A'}
+Geography: ${userInput?.geography || 'N/A'}
+Business Context: ${userInput?.business || 'N/A'}, targeting ${userInput?.audience || 'N/A'}
 
 Generate queries that:
 - Use site:linkedin.com/in/ to target individual LinkedIn profiles
@@ -215,7 +236,7 @@ Generate queries that:
 Return a JSON array of 2-3 query strings. Example:
 ["site:linkedin.com/in/ \"John Doe\" \"Acme Corp\" CEO", "site:linkedin.com/in/ \"J. Doe\" \"Acme Corporation\" \"Chief Executive\""]
 
-Return only valid JSON.`;
+Return only valid JSON.`
 
       const queryResponse = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
@@ -242,8 +263,13 @@ Return only valid JSON.`;
       const searchResults = [];
       for (const query of queries) {
         const url = `https://www.google.com/search?q=${encodeURIComponent(query)}&num=10`;
+
+        // Simulate human-like mouse movement
+        await page.mouse.move(100, 100, { steps: 10 });
+        await page.mouse.move(200, 200, { steps: 10 });
         await page.goto(url, { timeout: 30000 });
-        await page.waitForTimeout(2000);
+        // Add random delay
+        await page.waitForTimeout(Math.random() * 2000 + 1000);
 
         const results = await page.evaluate(() => {
           const elements = document.querySelectorAll('div.tF2Cxc, div.g');
@@ -256,12 +282,13 @@ Return only valid JSON.`;
             const url = linkEl?.href || '';
             const snippet = snippetEl?.innerText?.trim() || '';
             
-            return url.includes('linkedin.com/in/') ? { title, url, snippet } : null;
+            return url-includes('linkedin.com/in/') ? { title, url, snippet } : null;
           }).filter(Boolean);
         });
 
         searchResults.push(...results);
-        await page.waitForTimeout(2000 + Math.random() * 1000);
+        // Add random delay
+        await page.waitForTimeout(Math.random() * 2000 + 1000);
       }
 
       // Remove duplicates by URL
@@ -273,8 +300,8 @@ Return only valid JSON.`;
 Person Name: ${name}
 Company: ${company || 'N/A'}
 Role: ${role || 'N/A'}
-Geography: ${this.userInput?.geography || 'N/A'}
-Business Context: ${this.userInput?.business || 'N/A'}, targeting ${this.userInput?.audience || 'N/A'}
+Geography: ${userInput?.geography || 'N/A'}
+Business Context: ${userInput?.business || 'N/A'}, targeting ${userInput?.audience || 'N/A'}
 
 Search Results:
 ${uniqueResults.map((r, i) => `${i + 1}. TITLE: ${r.title}\nURL: ${r.url}\nSNIPPET: ${r.snippet}`).join('\n\n')}
@@ -292,7 +319,7 @@ Focus on:
 
 Return a JSON array of objects with: { "url": string, "score": number, "reason": string }
 Include only results with score >= 7. If no results meet this threshold, return an empty array.
-Return only valid JSON.`;
+Return only valid JSON.`
 
       const filterResponse = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
@@ -334,8 +361,12 @@ Return only valid JSON.`;
     const page = this.pages[pageIndex];
     
     try {
+      // Simulate human-like mouse movement
+      await page.mouse.move(100, 100, { steps: 10 });
+      await page.mouse.move(200, 200, { steps: 10 });
       await page.goto(url, { timeout: 30000 });
-      await page.waitForTimeout(2000);
+      // Add random delay
+      await page.waitForTimeout(Math.random() * 2000 + 1000);
       
       const scrapedData = await page.evaluate(() => {
         document.querySelectorAll('script, style, nav, footer, header, .ads, .cookie-banner').forEach(el => el.remove());
@@ -372,12 +403,20 @@ Return only valid JSON.`;
             employees: document.querySelector('[data-testid="employees"]')?.innerText?.trim() || ''
           };
         } else if (hostname.includes('clutch.co')) {
+          const reviews = Array.from(document.querySelectorAll('.review-item')).map(review => {
+            const reviewerName = review.querySelector('.reviewer-name')?.innerText?.trim() || '';
+            const reviewerRole = review.querySelector('.reviewer-role')?.innerText?.trim() || '';
+            const companyName = review.querySelector('.company-name')?.innerText?.trim() || '';
+            return { reviewerName, reviewerRole, companyName };
+          });
+
           platformData = {
             type: 'clutch',
             companyName: document.querySelector('.company_name')?.innerText?.trim() || '',
             rating: document.querySelector('.rating')?.innerText?.trim() || '',
             reviews: document.querySelector('.reviews-count')?.innerText?.trim() || '',
-            description: document.querySelector('.company_description')?.innerText?.trim() || ''
+            description: document.querySelector('.company_description')?.innerText?.trim() || '',
+            reviewers: reviews
           };
         } else if (hostname.includes('g2.com')) {
           platformData = {
@@ -460,11 +499,20 @@ Return only valid JSON.`;
           const name = nameMatch[0];
           const role = person.replace(name, '').trim();
           const company = scrapedData.platformData.companyName || scrapedData.title.split(' ')[0];
-          const linkedinUrls = await this.searchLinkedInProfile(name, company, role, pageIndex);
+          const linkedinUrls = await this.searchLinkedInProfile(name, company, role, pageIndex, userInput);
           additionalLinkedInUrls.push(...linkedinUrls);
         }
       }
       scrapedData.linkedinUrls.push(...additionalLinkedInUrls);
+    }
+
+    if (scrapedData.platformData.type === 'clutch' && scrapedData.platformData.reviewers) {
+      for (const reviewer of scrapedData.platformData.reviewers) {
+        if (reviewer.reviewerName && reviewer.companyName) {
+          const linkedinUrls = await this.searchLinkedInProfile(reviewer.reviewerName, reviewer.companyName, reviewer.reviewerRole, pageIndex, userInput);
+          additionalLinkedInUrls.push(...linkedinUrls);
+        }
+      }
     }
 
     const prompt = `Extract and enhance lead information from this scraped data. BE GENEROUS - extract leads even with minimal information.
@@ -520,7 +568,7 @@ Extract and return JSON with:
 ALWAYS return a lead if you can identify ANY company name, person name, or business context. 
 If information is missing, make reasonable assumptions based on industry standards.
 Return null only if absolutely no business context can be found.
-Return only valid JSON.`;
+Return only valid JSON.`
 
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -539,7 +587,9 @@ Return only valid JSON.`;
 
       if (leadInfo && (leadInfo.company || (leadInfo.key_people && leadInfo.key_people.length > 0))) {
         leadInfo.raw_data = {
-          platform: scrapedData.platformData.type || 'website',
+          platform: scrapedData.platformData.type ||
+
+ 'website',
           title: scrapedData.title,
           meta: scrapedData.meta,
           all_emails: cleanEmails,
@@ -554,12 +604,13 @@ Return only valid JSON.`;
       return null;
     } catch (error) {
       console.error('Failed to parse lead info:', error.message);
+      // console.error Ascertainable
       console.error('AI raw response:', response.choices[0].message.content);
       return null;
     }
   }
 
-  async processAllDorks(dorks) {
+  async processAllDorks(dorks, progressCallback) {
     console.log(`\n🔍 Processing ${dorks.length} search queries in parallel...`);
     
     const dorkPromises = dorks.map(async (dork, index) => {
@@ -573,6 +624,9 @@ Return only valid JSON.`;
       try {
         const results = await this.processDork(dork, pageIndex);
         console.log(`✅ Query ${index + 1} completed: ${results.length} results`);
+        if (progressCallback) {
+          progressCallback(index + 1, dorks.length, 0);
+        }
         return results;
       } finally {
         this.releasePage(pageIndex);
@@ -586,9 +640,10 @@ Return only valid JSON.`;
     return allResults;
   }
 
-  async processDeepScraping(relevantResults, allResults, userInput) {
+  async processDeepScraping(relevantResults, allResults, userInput, progressCallback) {
     console.log('\n📄 Deep scraping and extracting lead information in parallel...');
     
+    let leadsCount = 0;
     const scrapingPromises = relevantResults.map(async (result, index) => {
       while (this.pageQueue.length === 0) {
         await new Promise(resolve => setTimeout(resolve, 100));
@@ -617,6 +672,10 @@ Return only valid JSON.`;
             );
             
             console.log(`✅ Lead extracted: ${leadInfo.company || 'Unknown Company'}`);
+            leadsCount++;
+            if (progressCallback) {
+              progressCallback(relevantResults.length, index + 1, leadsCount);
+            }
             
             return {
               source: originalResult,
@@ -630,9 +689,15 @@ Return only valid JSON.`;
         } else {
           console.log(`⚠️ No scraped data from: ${originalResult.url}`);
         }
+        if (progressCallback) {
+            progressCallback(relevantResults.length, index + 1, leadsCount);
+        }
         return null;
       } catch (error) {
         console.error(`❌ Error scraping ${originalResult.url}:`, error.message);
+        if (progressCallback) {
+            progressCallback(relevantResults.length, index + 1, leadsCount);
+        }
         return null;
       } finally {
         this.releasePage(pageIndex);
@@ -650,8 +715,10 @@ Return only valid JSON.`;
     return validLeads;
   }
 
-  async processLeads(dorks, userInput, platforms) {
-    const allResults = await this.processAllDorks(dorks);
+  async processLeads(dorks, userInput, platforms, progressCallback) {
+    const allResults = await this.processAllDorks(dorks, (current, total, leadsCount) => {
+        progressCallback(total, current, leadsCount)
+    });
     
     console.log('\n🎯 Filtering relevant results...');
     let relevantResults = await this.filterRelevantResults(allResults, userInput, platforms);
@@ -694,7 +761,9 @@ Return only valid JSON.`;
       console.log(`Added ${remainingResults.length} fallback results. Total: ${relevantResults.length}`);
     }
 
-    const qualifiedLeads = await this.processDeepScraping(relevantResults, allResults, userInput);
+    const qualifiedLeads = await this.processDeepScraping(relevantResults, allResults, userInput, (total, current, leadsCount) => {
+        progressCallback(total, current, leadsCount)
+    });
     return qualifiedLeads;
   }
 
@@ -736,13 +805,15 @@ Return only valid JSON.`;
       Source_URL: lead.source.url,
       Score: lead.score
     }));
+              
+    if (csvRows.length > 0) {
+        const csvContent = [
+            Object.keys(csvRows[0]).join(','),
+            ...csvRows.map(row => Object.values(row).map(v => `"${String(v || '').replace(/"/g, '""')}"`).join(','))
+        ].join('\n');
 
-    const csvContent = [
-      Object.keys(csvRows[0]).join(','),
-      ...csvRows.map(row => Object.values(row).map(v => `"${v}"`).join(','))
-    ].join('\n');
-
-    fs.writeFileSync(path.join(this.resultsDir, 'leads.csv'), csvContent);
+        fs.writeFileSync(path.join(this.resultsDir, 'leads.csv'), csvContent);
+    }
     
     console.log('\n📋 Reports generated:');
     console.log('- lead_generation_report.json: Detailed JSON report');
@@ -757,34 +828,4 @@ Return only valid JSON.`;
   }
 }
 
-async function main() {
-  const generator = new SmartLeadGenerator();
-  
-  try {
-    await generator.init();
-    
-    const userInput = await generator.getUserInput();
-    console.log('\n🎯 Generating smart search strategy...');
-    
-    const strategy = await generator.generateSearchStrategy(userInput);
-    console.log(`\n📊 Strategy generated:`);
-    console.log(`- Platforms: ${strategy.platforms.join(', ')}`);
-    console.log(`- Keywords: ${strategy.keywords.join(', ')}`);
-    console.log(`- Search queries: ${strategy.dorks.length}`);
-    
-    const leads = await generator.processLeads(strategy.dorks, userInput, strategy.platforms);
-    
-    if (leads.length > 0) {
-      await generator.generateReport(leads, userInput, strategy);
-    } else {
-      console.log('\n❌ No qualified leads found. Try adjusting your search criteria.');
-    }
-    
-  } catch (error) {
-    console.error('❌ Error:', error);
-  } finally {
-    await generator.close();
-  }
-}
-
-main().catch(console.error);
+module.exports = {SmartLeadGenerator}

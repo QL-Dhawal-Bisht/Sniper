@@ -1,1445 +1,228 @@
 {
   "campaign": {
-    "business": "b2b",
-    "services": "web dev, mobile dev",
-    "audience": "ceos, ctos",
-    "timestamp": "2025-07-14T07:00:31.125Z"
+    "business": "custom software development company",
+    "services": "web and mobile app development, cloud solutions, AI-based applications",
+    "audience": "tech startups, e-commerce companies, enterprises looking to digitalize their operations",
+    "timestamp": "2025-07-15T09:53:50.114Z"
   },
   "strategy": {
     "platforms": [
-      "linkedin.com",
-      "crunchbase.com",
-      "clutch.co",
-      "quora.com",
-      "g2.com",
-      "capterra.com",
-      "producthunt.com",
-      "ycombinator.com",
-      "betalist.com",
-      "indiehackers.com"
+      "reddit.com"
     ],
     "keywords": [
-      "web development services",
+      "custom software development",
+      "web app development",
       "mobile app development",
-      "custom software solutions",
-      "digital transformation",
-      "IT consulting",
-      "enterprise software",
-      "B2B technology solutions",
-      "business mobile apps",
-      "software development companies",
-      "technology strategy"
+      "cloud solutions for startups",
+      "AI applications for e-commerce",
+      "digital transformation for enterprises",
+      "software solutions for tech startups",
+      "enterprise application development"
     ],
     "dorks_used": 15
   },
   "results": {
-    "total_leads": 22,
+    "total_leads": 3,
     "leads": [
       {
         "source": {
-          "title": "Shashank Srivastava - CEO - CodingClave Technologies",
-          "url": "https://in.linkedin.com/in/shashank-srivastava-5b11689a",
-          "snippet": "CEO at CodingClave Technologies · ✓ CodingClave Development LLP ♛ About Me ... web development services to international market since 2008. We are a ..."
+          "title": "u/No-Brief-4128 - Software Company In Lucknow India",
+          "url": "https://www.reddit.com/user/No-Brief-4128/comments/17hkfej/software_company_in_lucknow_india_it_companies_in/",
+          "snippet": "Whether you are looking for custom software development, website development, or digital marketing services, Communicadence India Software ..."
         },
         "leadInfo": {
-          "company": "LinkedIn",
+          "company": "Communicadence India Software",
           "contact_info": {
             "emails": [],
             "phones": [],
-            "website": "http://www.w3.org/2000/svg",
-            "linkedin": "https://in.linkedin.com/in/shashank-srivastava-5b11689a",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Shashank Srivastava",
-              "title": "Professional (inferred from LinkedIn)",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/shashank-srivastava-5b11689a"
-            }
-          ],
-          "business_info": {
-            "industry": "Technology / Web Development",
-            "size": "Small to Medium (inferred from B2B context)",
-            "location": "India (inferred from LinkedIn URL)",
-            "funding": "Not available",
-            "stage": "Startup (inferred from B2B focus)"
-          },
-          "pain_points": [
-            "Need for web and mobile development solutions"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev services"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\""
-            ],
-            "scraped_at": "2025-07-14T06:55:35.852Z"
-          }
-        },
-        "score": 8,
-        "reason": "CEO & Founder of a web development company, indicating a strong potential for collaboration and service needs."
-      },
-      {
-        "source": {
-          "title": "Ritesh Tiwari - Founder & CEO - DataSlexIndia",
-          "url": "https://in.linkedin.com/in/ritesh-tiwari-ceo-dataslexindia",
-          "snippet": "Founder & CEO at DataSlexIndia | App Development ... Specialties: Custom Software Development, Mobile App Development Services, Web Development Services ..."
-        },
-        "leadInfo": {
-          "company": "Dataslex India",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "http://www.w3.org/2000/svg",
-            "linkedin": "https://in.linkedin.com/in/ritesh-tiwari-ceo-dataslexindia",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Ritesh Tiwari",
-              "title": "CEO",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/ritesh-tiwari-ceo-dataslexindia"
-            }
-          ],
-          "business_info": {
-            "industry": "Web Development, Mobile Development",
-            "size": "Small to Medium (estimated)",
-            "location": "India (inferred from LinkedIn URL)",
-            "funding": "Not available",
-            "stage": "Startup"
-          },
-          "pain_points": [
-            "Need for web and mobile development solutions"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev services"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their service offerings.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\""
-            ],
-            "scraped_at": "2025-07-14T06:57:36.501Z"
-          }
-        },
-        "score": 7,
-        "reason": "CEO & Lead Developer of a web development services company, indicating potential service needs and decision-making authority."
-      },
-      {
-        "source": {
-          "title": "Sanjeev Kumar - Founder & Chief Executive Officer (CEO) ...",
-          "url": "https://in.linkedin.com/in/sanjeev-kumar-697aa336",
-          "snippet": "Founder & Chief Executive Officer (CEO) at Hilt Web Solutions Private ... web development services, including but not limited to: Website Design and ..."
-        },
-        "leadInfo": {
-          "company": "LinkedIn",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "http://www.w3.org/2000/svg",
-            "linkedin": "https://in.linkedin.com/in/sanjeev-kumar-697aa336",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Sanjeev Kumar",
-              "title": "CEO/CTO (inferred from context)",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/sanjeev-kumar-697aa336"
-            }
-          ],
-          "business_info": {
-            "industry": "Technology/Software Development",
-            "size": "Small to Medium (inferred from B2B focus)",
-            "location": "India (inferred from LinkedIn URL)",
-            "funding": "Not available",
-            "stage": "Startup (inferred from B2B focus and need for web/mobile development)"
-          },
-          "pain_points": [
-            "Need for web development and mobile development services"
-          ],
-          "buying_signals": [
-            "Looking for web and mobile development solutions"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and operational efficiency.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\""
-            ],
-            "scraped_at": "2025-07-14T06:58:04.331Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Ravi Kumar Jangid - Founder - Web Nautical",
-          "url": "https://in.linkedin.com/in/ravikjangid",
-          "snippet": "CEO | Web & Mobile Development | Digital Marketing · As the CEO of Web ... “I'd like to consider @Ravi Sir for his marketing and Web Development services."
-        },
-        "leadInfo": {
-          "company": "LinkedIn",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://business.linkedin",
-            "linkedin": "https://www.linkedin.com/company/setup",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Ravi K. Jangid",
-              "title": "CEO/CTO (inferred from context)",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/ravikjangid"
-            }
-          ],
-          "business_info": {
-            "industry": "Technology/Software Development",
-            "size": "Small to Medium (inferred from B2B context)",
-            "location": "Not specified (assumed to be global)",
-            "funding": "Not specified",
-            "stage": "Startup/Growth (inferred from B2B focus)"
-          },
-          "pain_points": [
-            "Need for web and mobile development solutions"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev services"
-          ],
-          "lead_score": "6",
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and streamline operations.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [
-              "https://www.linkedin.com/in/demo-test-a42693360",
-              "https://www.linkedin.com/company/setup"
-            ],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"",
-              "https://business.linkedin",
-              "https://premium.linkedin",
-              "https://learning.linkedin",
-              "https://media.licdn"
-            ],
-            "scraped_at": "2025-07-14T06:58:18.280Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Sunil Kumar - CEO & Project Leader - Web Development ...",
-          "url": "https://in.linkedin.com/in/sunil-kumar-60402238",
-          "snippet": "CEO & Project Leader at Web Development, Web Designing and SEO Services ... web development services, search engine optimization, e-commerce solutions ..."
-        },
-        "leadInfo": {
-          "company": "Sunil Kumar",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://in.linkedin.com/in/sunil-kumar-60402238",
-            "linkedin": "https://in.linkedin.com/in/sunil-kumar-60402238",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Sunil Kumar",
-              "title": "CEO/CTO",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/sunil-kumar-60402238"
-            }
-          ],
-          "business_info": {
-            "industry": "Web Development, Mobile Development",
-            "size": "Small to Medium (estimate based on typical B2B startups)",
-            "location": "India (inferred from LinkedIn URL)",
-            "funding": "Not specified",
-            "stage": "Startup"
-          },
-          "pain_points": [
-            "Need for web and mobile development services"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev solutions"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their business capabilities.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [],
-            "scraped_at": "2025-07-14T06:58:28.255Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Web Desg - Founder and CEO - Webdesg",
-          "url": "https://in.linkedin.com/in/web-desg-10bb8a172",
-          "snippet": "Founder and CEO. Webdesg. Jul 2018 - Present 7 ... 6) Logo Design WEB DEVELOPMENT SERVICES 1) Web ... 6) Logo Design WEB DEVELOPMENT SERVICES 1) Web ..."
-        },
-        "leadInfo": {
-          "company": "LinkedIn",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "http://www.w3.org/2000/svg",
-            "linkedin": "https://in.linkedin.com/in/web-desg-10bb8a172",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Web Designer",
-              "title": "Web Developer",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/web-desg-10bb8a172"
-            }
-          ],
-          "business_info": {
-            "industry": "Technology / Web Development",
-            "size": "Small to Medium (estimated based on B2B context)",
-            "location": "Global (based on LinkedIn platform)",
-            "funding": "Not available",
-            "stage": "Startup"
-          },
-          "pain_points": [
-            "Need for web and mobile development services"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev solutions"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development services to enhance their digital presence and meet their business needs.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\""
-            ],
-            "scraped_at": "2025-07-14T06:58:29.475Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Amit Karmakar - CEO - Softgemi Corporation",
-          "url": "https://in.linkedin.com/in/amitkarmakar",
-          "snippet": "CEO. Softgemi Corporation. Jan 2005 - Present 20 years 6 months. Siliguri. Softgemi Corporation world leader in software and web development services with ..."
-        },
-        "leadInfo": {
-          "company": "Amit Karmakar",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "http://www.w3.org/2000/svg",
-            "linkedin": "https://in.linkedin.com/in/amitkarmakar",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Amit Karmakar",
-              "title": "Web Developer / Mobile Developer",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/amitkarmakar"
-            }
-          ],
-          "business_info": {
-            "industry": "Web Development / Mobile Development",
-            "size": "Small to Medium (estimate based on B2B context)",
-            "location": "India (inferred from LinkedIn URL)",
-            "funding": "Not available",
-            "stage": "Startup"
-          },
-          "pain_points": [
-            "Need for web and mobile development services"
-          ],
-          "buying_signals": [
-            "Looking for CEOs and CTOs who need development services"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their business operations.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\""
-            ],
-            "scraped_at": "2025-07-14T06:58:27.840Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Jigney Bhachech - CEO - Opal Infotech",
-          "url": "https://in.linkedin.com/in/seocompanyindia",
-          "snippet": "CEO at Opal Infotech · Opal Infotech is proud to ... Opal Infotech is a leading web development company offering outsource web development services ..."
-        },
-        "leadInfo": {
-          "company": "SEO Company India",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://in.linkedin.com/in/seocompanyindia",
-            "linkedin": "https://in.linkedin.com/in/seocompanyindia",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "SEO Company India",
-              "title": "CEO/CTO",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/seocompanyindia"
-            }
-          ],
-          "business_info": {
-            "industry": "Web Development, Mobile Development",
-            "size": "Small to Medium (estimated)",
-            "location": "India (inferred from LinkedIn URL)",
-            "funding": "Not available",
-            "stage": "Startup/Growth (estimated)"
-          },
-          "pain_points": [
-            "Need for web and mobile development services"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev solutions"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Highlight your expertise in web and mobile development to help them enhance their digital presence.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\""
-            ],
-            "scraped_at": "2025-07-14T06:58:42.202Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Nitin Gohel - Director & CTO at APPREATOR ...",
-          "url": "https://in.linkedin.com/in/nitingohel",
-          "snippet": "As the Director & CTO at Appreator Technologies LLP, I have a strong focus on mobile app development, showcasing our expertise in creating exceptional ..."
-        },
-        "leadInfo": {
-          "company": "LinkedIn",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "http://www.w3.org/2000/svg",
-            "linkedin": "https://in.linkedin.com/in/nitingohel",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Nitin Gohel",
-              "title": "CEO/CTO (inferred from context)",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/nitingohel"
-            }
-          ],
-          "business_info": {
-            "industry": "Technology/Software Development",
-            "size": "Small to Medium (estimated based on B2B context)",
-            "location": "Not specified (assumed to be India based on LinkedIn URL)",
-            "funding": "Not specified",
-            "stage": "Startup/Growth (inferred from context)"
-          },
-          "pain_points": [
-            "Need for web development and mobile development solutions"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev services"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their digital presence and operational efficiency.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\""
-            ],
-            "scraped_at": "2025-07-14T06:58:51.130Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Sudarshan Roy - Co-Founder & CTO at Webfrnz ...",
-          "url": "https://in.linkedin.com/in/sudarshanroy",
-          "snippet": "Sudarshan Roy. Co-Founder & CTO at Webfrnz Technologies | Software Development | Web Development | Mobile App Development | Digital Marketing. Webfrnz ..."
-        },
-        "leadInfo": {
-          "company": "Sudarshan Roy",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://in.linkedin.com/in/sudarshanroy",
-            "linkedin": "https://in.linkedin.com/in/sudarshanroy",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Sudarshan Roy",
-              "title": "CEO/CTO",
-              "email": null,
-              "linkedin": "https://in.linkedin.com/in/sudarshanroy"
-            }
-          ],
-          "business_info": {
-            "industry": "Web Development, Mobile Development",
-            "size": "Small to Medium (estimated)",
-            "location": "India (inferred from LinkedIn URL)",
-            "funding": "Not available",
-            "stage": "Startup"
-          },
-          "pain_points": [
-            "Need for web and mobile development services"
-          ],
-          "buying_signals": [
-            "Looking for web dev and mobile dev solutions"
-          ],
-          "lead_score": "6",
-          "pitch_angle": "Highlight the importance of robust web and mobile solutions for scaling their business.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [],
-            "scraped_at": "2025-07-14T06:58:58.805Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Ajeshkumar C. - Founder & CTO - DXB APPS",
-          "url": "https://www.linkedin.com/in/ajeshkumar-c-4b7534139/",
-          "snippet": "Highly experienced professional with expertise in blockchain technology, mobile app development, and AI solutions. Founder and CTO of DXB APPS - D X ..."
-        },
-        "leadInfo": {
-          "company": "DXB Apps - D X Technologies LLC",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "http://www.dxbapps.com",
-            "linkedin": "https://www.linkedin.com/in/ajeshkumar-c-4b7534139/",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Ajeshkumar C.",
-              "title": "Founder & CTO",
-              "email": null,
-              "linkedin": "https://www.linkedin.com/in/ajeshkumar-c-4b7534139/"
-            }
-          ],
-          "business_info": {
-            "industry": "Digital Innovation / Technology Consulting",
-            "size": "Small to Medium (estimated based on follower count and connections)",
-            "location": "Dubai, United Arab Emirates",
-            "funding": "Not specified",
-            "stage": "Growth"
-          },
-          "pain_points": [
-            "Need for innovative mobile app solutions",
-            "Challenges in blockchain technology adoption",
-            "Demand for AI and machine learning integration"
-          ],
-          "buying_signals": [
-            "Active engagement with new clients",
-            "Interest in collaboration opportunities",
-            "Focus on emerging technologies"
-          ],
-          "lead_score": 7,
-          "pitch_angle": "Leverage our expertise in blockchain and mobile app development to transform your business ideas into successful digital solutions.",
-          "raw_data": {
-            "platform": "linkedin",
-            "title": "(16) Ajeshkumar C. | LinkedIn",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [
-              "https://www.linkedin.com/in/demo-test-a42693360",
-              "https://www.linkedin.com/company/setup",
-              "https://www.linkedin.com/in/ajeshkumar-c-4b7534139",
-              "https://www.linkedin.com/company/23706002",
-              "https://www.linkedin.com/company/85076602",
-              "https://www.linkedin.com/company/67875969",
-              "https://www.linkedin.com/company/81806575",
-              "https://www.linkedin.com/company/40876336",
-              "https://www.linkedin.com/in/daipayan-a-37826419",
-              "https://www.linkedin.com/in/yasirjamal87",
-              "https://www.linkedin.com/company/1009",
-              "https://www.linkedin.com/company/1015",
-              "https://www.linkedin.com/company/1649",
-              "https://www.linkedin.com/in/nadineimad",
-              "https://www.linkedin.com/company/4831032",
-              "https://www.linkedin.com/company/6379621",
-              "https://www.linkedin.com/in/viyat",
-              "https://www.linkedin.com/in/ajinkya-kalantri-25b8937b",
-              "https://www.linkedin.com/in/jehanzeb-awan-56b08430",
-              "https://www.linkedin.com/in/drmarwan",
-              "https://www.linkedin.com/in/ali-safri-7025a71",
-              "https://www.linkedin.com/in/harshitdabas",
-              "https://www.linkedin.com/in/chirag-chauhan-515a21260",
-              "https://www.linkedin.com/in/medvita-healthtech-aa77792b4",
-              "https://www.linkedin.com/in/ayushhooda",
-              "https://www.linkedin.com/in/rgxai",
-              "https://www.linkedin.com/in/nupur0013",
-              "https://www.linkedin.com/in/swadheet-chaturvedi-7562a892",
-              "https://www.linkedin.com/in/richa-sharma-570503189",
-              "https://www.linkedin.com/in/zaur-xing-27583b272",
-              "https://www.linkedin.com/company/4842724",
-              "https://www.linkedin.com/company/1555603",
-              "https://in.linkedin.com/in/varun-majumdar-60228777",
-              "https://in.linkedin.com/in/love-kumar-a4741851",
-              "https://www.linkedin.com/in/ajeshkumar-c-4b7534139/",
-              "https://uk.linkedin.com/in/jayson-weston-74011714",
-              "https://uk.linkedin.com/in/ruta-greenslade"
-            ],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"",
-              "https://business.linkedin",
-              "https://premium.linkedin",
-              "https://learning.linkedin",
-              "https://media.licdn"
-            ],
-            "scraped_at": "2025-07-14T07:00:31.102Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "ACOM Solutions - Crunchbase Company Profile & Funding",
-          "url": "https://www.crunchbase.com/organization/acom-solutions",
-          "snippet": "Acquiring and Building B2B Tech Companies since 1983."
-        },
-        "leadInfo": {
-          "company": "Acom Solutions",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.crunchbase.com/organization/acom-solutions",
+            "website": "https://www.reddit.com/user/No-Brief-4128/comments/17hkfej/software_company_in_lucknow_india_it_companies_in/",
             "linkedin": null,
             "social": []
           },
           "key_people": [
             {
-              "name": "Support Team",
-              "title": "Customer Support",
-              "email": null,
-              "linkedin": null
-            }
-          ],
-          "business_info": {
-            "industry": "Technology/Software Development",
-            "size": "Small to Medium (estimate based on B2B context)",
-            "location": "United States (inferred from platform)",
-            "funding": null,
-            "stage": "Startup (inferred from context)"
-          },
-          "pain_points": [
-            "Need for web and mobile development solutions"
-          ],
-          "buying_signals": [
-            "Seeking support indicates potential need for services"
-          ],
-          "lead_score": 5,
-          "pitch_angle": "Highlight how our web and mobile development services can enhance their customer support capabilities.",
-          "raw_data": {
-            "platform": "crunchbase",
-            "title": "Just a moment...",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [],
-            "scraped_at": "2025-07-14T06:57:22.136Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Chris Cooper - Crunchbase Person Profile",
-          "url": "https://www.crunchbase.com/person/chris-cooper-2350",
-          "snippet": "... Software Development, B2B and Health Care. Now, committed to changing the way we market, communicate and finance B2B tech through venture development. Read ..."
-        },
-        "leadInfo": {
-          "company": "Crunchbase",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.crunchbase.com",
-            "linkedin": "https://www.linkedin.com/company/crunchbase",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Chris Cooper",
-              "title": "Person (potentially a CEO or CTO based on context)",
-              "email": null,
-              "linkedin": "https://www.crunchbase.com/person/chris-cooper-2350"
-            }
-          ],
-          "business_info": {
-            "industry": "Technology/Information Services",
-            "size": "Medium (estimated based on Crunchbase's presence)",
-            "location": "United States (assumed based on Crunchbase's operations)",
-            "funding": "Publicly funded",
-            "stage": "Enterprise"
-          },
-          "pain_points": [
-            "Need for web development and mobile development solutions"
-          ],
-          "buying_signals": [
-            "Potential need for tech solutions",
-            "Engagement with support team"
-          ],
-          "lead_score": 6,
-          "pitch_angle": "Offer tailored web and mobile development solutions to enhance their platform capabilities.",
-          "raw_data": {
-            "platform": "crunchbase",
-            "title": "Just a moment...",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [],
-            "scraped_at": "2025-07-14T06:57:25.034Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "FABA Technology, 13 Reviews, Address, Data & More",
-          "url": "https://clutch.co/profile/faba-technology",
-          "snippet": "Listed among Top Web Developers in Vietnam and Top B2B Companies in Asia ... Reach out to us at contact@fabatechnology.com and let our team help you ..."
-        },
-        "leadInfo": {
-          "company": "FABA Technology",
-          "contact_info": {
-            "emails": [
-              "contact@fabatechnology.com"
-            ],
-            "phones": [],
-            "website": "https://fabatechnology.com",
-            "linkedin": null,
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Michael Hua",
-              "title": "CEO",
-              "email": null,
-              "linkedin": null
-            },
-            {
-              "name": "Trang Vu Thi Thu",
-              "title": "Product Owner",
+              "name": "No-Brief-4128",
+              "title": "User/Contributor",
               "email": null,
               "linkedin": null
             }
           ],
           "business_info": {
             "industry": "Software Development",
-            "size": "10 - 49 employees",
-            "location": "Ho Chi Minh City, Vietnam",
-            "funding": null,
-            "stage": "growth"
-          },
-          "pain_points": [
-            "Initial communication issues with offshore teams",
-            "Need for tailored software solutions in various industries"
-          ],
-          "buying_signals": [
-            "Looking for web and mobile development services",
-            "Interest in cloud technology and consulting"
-          ],
-          "lead_score": 8,
-          "pitch_angle": "Highlight FABA Technology's expertise in delivering high-quality, tailored software solutions with a strong focus on project management and customer service.",
-          "raw_data": {
-            "platform": "clutch",
-            "title": "FABA Technology, 13 Reviews, Address, Data & More",
-            "meta": {
-              "description": "Listed among Top Web Developers in Vietnam and Top B2B Companies in Asia, FABA Technology is one of the most trusted software development providers. \nApart from",
-              "keywords": ""
-            },
-            "all_emails": [
-              "contact@fabatechnology.com"
-            ],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "https://shortlist.clutch",
-              "https://r.clutch",
-              "https://img.shgstatic",
-              "https://project.clutch",
-              "https://fabatechnology.com"
-            ],
-            "scraped_at": "2025-07-14T06:56:42.188Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Millennial Web Development, 24 Reviews ...",
-          "url": "https://clutch.co/go-to-review/millennial-web-development/53627",
-          "snippet": "While researching top web developers in Chicago, I came across Millennial ... Contact Us. About Clutch. About Us · Careers · News & Press · Ranking Methodology ..."
-        },
-        "leadInfo": {
-          "company": "Millennial Web Development",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.millennialwebdevelopment.com",
-            "linkedin": [
-              "https://www.linkedin.com/in/breanna-greene",
-              "https://www.linkedin.com/in/ethan-patrick",
-              "https://www.linkedin.com/in/chava-mahelona-39a5b15",
-              "https://www.linkedin.com/in/joelglennwright"
-            ],
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Breanna Greene",
-              "title": "Owner",
-              "email": null,
-              "linkedin": "https://www.linkedin.com/in/breanna-greene"
-            },
-            {
-              "name": "Ethan Patrick",
-              "title": "CTO",
-              "email": null,
-              "linkedin": "https://www.linkedin.com/in/ethan-patrick"
-            },
-            {
-              "name": "Chava Mahelona",
-              "title": "Head of Content",
-              "email": null,
-              "linkedin": "https://www.linkedin.com/in/chava-mahelona-39a5b15"
-            },
-            {
-              "name": "Joel Glenn Wright",
-              "title": "Manager",
-              "email": null,
-              "linkedin": "https://www.linkedin.com/in/joelglennwright"
-            }
-          ],
-          "business_info": {
-            "industry": "Web Development",
-            "size": "2 - 9 employees",
-            "location": "Chicago, IL",
-            "funding": null,
-            "stage": "growth"
-          },
-          "pain_points": [
-            "Need for after-hours support during critical project phases",
-            "Managing complex projects with extensive customization"
-          ],
-          "buying_signals": [
-            "High client satisfaction ratings (4.8/5)",
-            "Frequent requests for e-commerce solutions",
-            "Positive feedback on project management and communication"
-          ],
-          "lead_score": 8,
-          "pitch_angle": "Highlight our expertise in responsive web design and development, emphasizing our proven track record of enhancing online sales capabilities and user experience for e-commerce businesses.",
-          "raw_data": {
-            "platform": "clutch",
-            "title": "Millennial Web Development, 24 Reviews, Address, Data & More",
-            "meta": {
-              "description": "Since opening its doors, Millennial Web Development has created successful, responsive websites across the market, from local tech startups to international",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [
-              "https://www.linkedin.com/in/breanna-greene",
-              "https://www.linkedin.com/in/ethan-patrick",
-              "https://www.linkedin.com/in/chava-mahelona-39a5b15",
-              "https://www.linkedin.com/in/joelglennwright"
-            ],
-            "all_websites": [
-              "https://shortlist.clutch",
-              "https://r.clutch",
-              "https://img.shgstatic",
-              "https://project.clutch",
-              "https://www.millennialwebdevelopment.com"
-            ],
-            "scraped_at": "2025-07-14T06:57:56.975Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "What is a reliable software development company ...",
-          "url": "https://www.quora.com/What-is-a-reliable-software-development-company-that-specializes-in-mobile-app-development",
-          "snippet": "What is the best mobile app development company in the USA, known for its expertise and track record in creating top-quality mobile applications ..."
-        },
-        "leadInfo": {
-          "company": "Quytech",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.quora.com/What-is-a-reliable-software-development-company-that-specializes-in-mobile-app-development",
-            "linkedin": "https://www.quora.com/profile/Kewal-Yadav-12",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Kewal Yadav",
-              "title": "Technical Content Writer",
-              "email": "",
-              "linkedin": "https://www.quora.com/profile/Kewal-Yadav-12"
-            }
-          ],
-          "business_info": {
-            "industry": "Software Development",
-            "size": "Medium (12+ years of experience suggests established presence)",
-            "location": "India (inferred from context)",
-            "funding": "Not specified",
-            "stage": "Growth"
-          },
-          "pain_points": [
-            "Need for reliable mobile app development",
-            "Complex app issues in latest and old OS versions"
-          ],
-          "buying_signals": [
-            "Mention of notable corporate clients",
-            "Experience in multiple advanced technologies"
-          ],
-          "lead_score": "8",
-          "pitch_angle": "Highlight Quytech's extensive experience and diverse technological expertise to address complex mobile app development needs.",
-          "raw_data": {
-            "platform": "website",
-            "title": "What is a reliable software development company that specializes in mobile app development? - Quora",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"><path",
-              "https://www.quora.com/\"",
-              "https://www.quora.com/profile/Kewal-Yadav-12\"",
-              "https://qph.cf",
-              "https://www.quora.com/What-is-a-reliable-software-development-company-that-specializes-in-mobile-app-development/answer/Kewal-Yadav-12\""
-            ],
-            "scraped_at": "2025-07-14T06:55:57.376Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Which is the best company for mobile app development ...",
-          "url": "https://www.quora.com/Which-is-the-best-company-for-mobile-app-development-services-including-React-Native-native-iOS-and-Android-apps-in-the-United-States",
-          "snippet": "What is the best mobile app development company in the USA, known for its expertise and track record in creating top-quality mobile ..."
-        },
-        "leadInfo": {
-          "company": "Mobile App Development Services",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.quora.com/Which-is-the-best-company-for-mobile-app-development-services-including-React-Native-native-iOS-and-Android-apps-in-the-United-States",
-            "linkedin": "https://www.quora.com/profile/Claire-Johnson-675",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Claire Johnson",
-              "title": "Mobile App Development Expert",
-              "email": null,
-              "linkedin": "https://www.quora.com/profile/Claire-Johnson-675"
-            },
-            {
-              "name": "Luke Clark",
-              "title": "Operation Manager",
-              "email": null,
-              "linkedin": null
-            },
-            {
-              "name": "Olivia Miller",
-              "title": "Bachelor in Applied Arts",
-              "email": null,
-              "linkedin": null
-            }
-          ],
-          "business_info": {
-            "industry": "Mobile App Development",
-            "size": "Small to Medium (estimate based on context)",
-            "location": "United States",
-            "funding": null,
-            "stage": "Growth (estimate based on context)"
-          },
-          "pain_points": [
-            "Need for cost-effective mobile app development solutions",
-            "Desire for customized and user-friendly applications"
-          ],
-          "buying_signals": [
-            "Interest in low-cost outsourcing for mobile app development",
-            "Seeking reputable companies for mobile app development services"
-          ],
-          "lead_score": 7,
-          "pitch_angle": "Highlight the importance of mobile app development in enhancing business connectivity and brand exposure, and offer tailored solutions that meet budget constraints.",
-          "raw_data": {
-            "platform": "website",
-            "title": "Which is the best company for mobile app development services, including React Native, native iOS, and Android apps, in the United States? - Quora",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"><path",
-              "https://www.quora.com/\"",
-              "https://www.quora.com/profile/Claire-Johnson-675\"",
-              "https://qph.cf",
-              "https://www.quora.com/Which-is-the-best-company-for-mobile-app-development-services-including-React-Native-native-iOS-and-Android-apps-in-the-United-States/answer/Claire-Johnson-675\""
-            ],
-            "scraped_at": "2025-07-14T06:56:01.142Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "What is the best mobile app development company in ...",
-          "url": "https://www.quora.com/What-is-the-best-mobile-app-development-company-in-the-USA-known-for-its-expertise-and-track-record-in-creating-top-quality-mobile-applications",
-          "snippet": "What is the best mobile app development company in the USA, known for its expertise and track record in creating top-quality mobile applications ..."
-        },
-        "leadInfo": {
-          "company": "MageSpider",
-          "contact_info": {
-            "emails": [
-              "info@magespider.com"
-            ],
-            "phones": [],
-            "website": "https://www.quora.com/What-is-the-best-mobile-app-development-company-in-the-USA-known-for-its-expertise-and-track-record-in-creating-top-quality-mobile-applications",
-            "linkedin": null,
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Bruno Sinclair",
-              "title": "Former Marketing Researcher",
-              "email": null,
-              "linkedin": "https://www.quora.com/profile/Bruno-Sinclair"
-            }
-          ],
-          "business_info": {
-            "industry": "Mobile App Development",
-            "size": "Small to Medium (based on typical industry standards)",
-            "location": "USA",
-            "funding": null,
-            "stage": "Growth"
-          },
-          "pain_points": [
-            "Finding reliable app development partners",
-            "Need for high-quality mobile applications"
-          ],
-          "buying_signals": [
-            "Interest in e-commerce application development",
-            "Seeking expertise in mobile solutions"
-          ],
-          "lead_score": 7,
-          "pitch_angle": "Highlight MageSpider's proven track record in e-commerce app development and their strong client reviews.",
-          "raw_data": {
-            "platform": "website",
-            "title": "What is the best mobile app development company in the USA, known for its expertise and track record in creating top-quality mobile applications? - Quora",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [
-              "info@magespider.com"
-            ],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"><path",
-              "https://www.quora.com/\"",
-              "https://www.quora.com/profile/Bruno-Sinclair\"",
-              "https://qph.cf",
-              "https://www.quora.com/Where-is-the-best-place-to-find-an-app-development-company-in-United-States/answer/Bruno-Sinclair?no_redirect=1\""
-            ],
-            "scraped_at": "2025-07-14T06:56:34.201Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Which is the best mobile app development company in ...",
-          "url": "https://www.quora.com/Which-is-the-best-mobile-app-development-company-in-the-USA-in-2020",
-          "snippet": "Originally Answered: What is the best mobile app development company in the USA, known for its expertise and track record in creating top ..."
-        },
-        "leadInfo": {
-          "company": "Fueled",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.quora.com/Which-is-the-best-mobile-app-development-company-in-the-USA-in-2020",
-            "linkedin": "",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Lowrance Scimone",
-              "title": "Former IT Consultant",
-              "email": "",
-              "linkedin": "https://www.quora.com/profile/Lowrance-Scimone"
-            }
-          ],
-          "business_info": {
-            "industry": "Mobile App Development",
-            "size": "Small to Medium (10-500 employees)",
-            "location": "USA",
-            "funding": "Not specified",
-            "stage": "Growth"
-          },
-          "pain_points": [
-            "Need for effective customer engagement",
-            "Competition in mobile app market"
-          ],
-          "buying_signals": [
-            "Interest in mobile app development",
-            "Seeking competitive advantage"
-          ],
-          "lead_score": 7,
-          "pitch_angle": "Highlight how a robust mobile app can enhance customer engagement and drive business growth.",
-          "raw_data": {
-            "platform": "website",
-            "title": "Which is the best mobile app development company in the USA in 2020? - Quora",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"><path",
-              "https://www.quora.com/\"",
-              "http://www.w3.org/2000/svg\"><g",
-              "https://www.quora.com/profile/Lowrance-Scimone\"",
-              "https://qph.cf"
-            ],
-            "scraped_at": "2025-07-14T06:56:27.121Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Which IT company provides the best mobile app ...",
-          "url": "https://www.quora.com/Which-IT-company-provides-the-best-mobile-app-development-services-in-Noida?top_ans=384933070",
-          "snippet": "What is the best mobile app development company? Why should I prefer that? 974 Views."
-        },
-        "leadInfo": {
-          "company": "Infowebsoft Technology",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.quora.com/Which-IT-company-provides-the-best-mobile-app-development-services-in-Noida?top_ans=384933070",
-            "linkedin": "https://www.quora.com/profile/Vipin-Rawat",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Vipin Rawat",
-              "title": "Founder & CEO",
-              "email": "",
-              "linkedin": "https://www.quora.com/profile/Vipin-Rawat"
-            }
-          ],
-          "business_info": {
-            "industry": "Mobile App Development",
             "size": "Small to Medium (estimated based on context)",
-            "location": "Noida, Uttar Pradesh, India",
+            "location": "Lucknow, India",
             "funding": "Not specified",
             "stage": "Growth"
           },
           "pain_points": [
-            "Need for reliable mobile app development services",
-            "Competition in the mobile app development market"
-          ],
-          "buying_signals": [
-            "Interest in finding the best mobile app development services",
-            "Engagement in discussions about mobile app development"
-          ],
-          "lead_score": 7,
-          "pitch_angle": "Highlight the innovative solutions and client satisfaction that Infowebsoft Technology can provide in the competitive mobile app development landscape.",
-          "raw_data": {
-            "platform": "website",
-            "title": "Which IT company provides the best mobile app development services in Noida? - Quora",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"><path",
-              "https://www.quora.com/\"",
-              "http://www.w3.org/2000/svg\"><g",
-              "https://www.quora.com/profile/Abhay-Chaturvedi-1\"",
-              "https://qph.cf"
-            ],
-            "scraped_at": "2025-07-14T06:56:37.773Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Which is the best mobile app development company ...",
-          "url": "https://www.quora.com/Which-is-the-best-mobile-app-development-company-in-Ludhiana?top_ans=26124983",
-          "snippet": "What is the best mobile app development company in Saudi Arabia in 2021? 810 Views."
-        },
-        "leadInfo": {
-          "company": "Netpixel Technologies",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.quora.com/Which-is-the-best-mobile-app-development-company-in-Ludhiana?top_ans=26124983",
-            "linkedin": "",
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Jane Tang",
-              "title": "Client/Reviewer",
-              "email": "",
-              "linkedin": "https://www.quora.com/profile/Jane-Tang-108"
-            }
-          ],
-          "business_info": {
-            "industry": "Mobile App Development",
-            "size": "Small to Medium",
-            "location": "Ludhiana, India",
-            "funding": "Not specified",
-            "stage": "Growth"
-          },
-          "pain_points": [
-            "Need for professional and quick mobile app development services"
-          ],
-          "buying_signals": [
-            "Positive reviews and portfolio mentioned"
-          ],
-          "lead_score": 7,
-          "pitch_angle": "Highlight the importance of professional and quick app development services to enhance user experience and business growth.",
-          "raw_data": {
-            "platform": "website",
-            "title": "Which is the best mobile app development company in Ludhiana? - Quora",
-            "meta": {
-              "description": "",
-              "keywords": ""
-            },
-            "all_emails": [],
-            "all_phones": [],
-            "all_linkedin": [
-              "https://www.linkedin.com/in/ritvik-sood"
-            ],
-            "all_websites": [
-              "http://www.w3.org/2000/svg\"><path",
-              "https://www.quora.com/\"",
-              "https://www.quora.com/profile/Jane-Tang-108\"",
-              "https://qph.cf",
-              "https://www.quora.com/Which-is-the-best-mobile-app-development-company-in-Ludhiana/answer/Jane-Tang-108\""
-            ],
-            "scraped_at": "2025-07-14T06:56:43.589Z"
-          }
-        },
-        "score": 4,
-        "reason": "Fallback selection - potential company/profile page detected"
-      },
-      {
-        "source": {
-          "title": "Custom software development Reviews 2025",
-          "url": "https://www.g2.com/products/hf-solution-custom-software-development/reviews",
-          "snippet": "Filter reviews by the users' company size, role or industry to find out how Custom software development works for a business like yours."
-        },
-        "leadInfo": {
-          "company": "HF-Solution",
-          "contact_info": {
-            "emails": [],
-            "phones": [],
-            "website": "https://www.g2.com/products/hf-solution-custom-software-development/reviews",
-            "linkedin": null,
-            "social": []
-          },
-          "key_people": [
-            {
-              "name": "Software Development Team",
-              "title": "Software Development Professionals",
-              "email": null,
-              "linkedin": null
-            }
-          ],
-          "business_info": {
-            "industry": "Software Development",
-            "size": "300+ employees",
-            "location": "Not specified (assumed global based on context)",
-            "funding": "Not specified",
-            "stage": "Growth"
-          },
-          "pain_points": [
-            "Need for custom software solutions",
-            "Challenges in project management",
-            "Desire for flexible cooperation models"
+            "Need for reliable and efficient software solutions",
+            "Demand for custom software and digital marketing services"
           ],
           "buying_signals": [
             "Interest in custom software development",
-            "Looking for reliable development partners"
+            "Focus on client satisfaction and tailored solutions"
           ],
           "lead_score": 6,
-          "pitch_angle": "Highlight our extensive experience and flexible cooperation models to meet unique project requirements.",
+          "pitch_angle": "Highlight the benefits of custom software solutions and digital marketing services to enhance business operations and client engagement.",
           "raw_data": {
-            "platform": "g2",
-            "title": "Custom software development Reviews 2025: Details, Pricing, & Features | G2",
+            "platform": "reddit",
+            "title": "Software Company In Lucknow India | it Companies In Lucknow - Communicadence India : u/No-Brief-4128",
             "meta": {
-              "description": "Filter reviews by the users' company size, role or industry to find out how Custom software development works for a business like yours.",
+              "description": "",
               "keywords": ""
             },
             "all_emails": [],
             "all_phones": [],
             "all_linkedin": [],
             "all_websites": [
-              "http://www.w3.org/2000/svg\"",
-              "https://www.g2.com/products/hf-solution-custom-software-development/reviews\"",
-              "https://www.g2.com/products/hf-solution-custom-software-development/take_survey\"",
-              "https://www.g2.com/categories/ai-chatbots\">AI",
-              "https://www.g2.com/categories/crm\">CRM"
+              "https://www.redditstatic.com/shreddit/en-US/left-nav-resources-section-client-js-ecd15a88.js,https://www.redditstatic.com/shreddit/en-US/left-nav-topics-section-client-js-53532b58.js,https://www.redditstatic.com/shreddit/en-US/left-nav-client-js-1fb7de40.js,https://www.redditstatic.com/shreddit/en-US/hamburger-menu-client-js-397baae5.js,https://www.redditstatic.com/shreddit/en-US/deprecated-content-client-js-9e558f56.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/alert-controller-client-js-9e166874.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/share-menu-client-js-3e462a44.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/award-leaderboard-empty-banner-client-js-59c3c105.js,https://www.redditstatic.com/shreddit/en-US/award-leaderboard-locked-banner-client-js-9a629e1c.js,https://www.redditstatic.com/shreddit/en-US/award-leaderboard-client-js-c37befc5.js,https://www.redditstatic.com/shreddit/en-US/award-dialog-client-js-9e5a5efe.js,https://www.redditstatic.com/shreddit/award-dialog-client-css-8f21c736.css\"",
+              "https://www.redditstatic.com/shreddit/en-US/explainer-dialog-client-js-9c11dd95.js,https://www.redditstatic.com/shreddit/explainer-dialog-client-css-83f5bb40.css\""
             ],
-            "scraped_at": "2025-07-14T06:57:01.095Z"
+            "scraped_at": "2025-07-15T09:53:40.019Z"
+          }
+        },
+        "score": 8,
+        "reason": "This post discusses seeking custom software development contracts with a specific budget, indicating potential buying intent and a clear business need."
+      },
+      {
+        "source": {
+          "title": "How much time do you spend on sales for government ...",
+          "url": "https://www.reddit.com/r/GovernmentContracting/comments/gndaki/how_much_time_do_you_spend_on_sales_for/",
+          "snippet": "I'd be looking for custom software development contracts that are worth $300,000 or less over a year or two period. One of the biggest ..."
+        },
+        "leadInfo": {
+          "company": "MichaelApproved",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://www.reddit.com/r/GovernmentContracting/comments/gndaki/how_much_time_do_you_spend_on_sales_for/",
+            "linkedin": null,
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "MichaelApproved",
+              "title": "Aspiring Government Contractor",
+              "email": null,
+              "linkedin": null
+            }
+          ],
+          "business_info": {
+            "industry": "Government Contracting / Custom Software Development",
+            "size": "Small to Medium (based on contract size)",
+            "location": "United States",
+            "funding": "Not available",
+            "stage": "Startup"
+          },
+          "pain_points": [
+            "Understanding the bidding process for government contracts",
+            "Time management for sales and bid-related activities",
+            "Access to winning bid examples and resources"
+          ],
+          "buying_signals": [
+            "Expressed interest in entering the government contracting field",
+            "Seeking resources and examples to improve bidding skills"
+          ],
+          "lead_score": "6",
+          "pitch_angle": "Offer tailored consulting services to guide new entrants in the government contracting space, focusing on the bidding process and providing access to winning proposal examples.",
+          "raw_data": {
+            "platform": "reddit",
+            "title": "How much time do you spend on sales for government contracts? : r/GovernmentContracting",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "https://www.redditstatic.com/shreddit/en-US/left-nav-resources-section-client-js-ecd15a88.js,https://www.redditstatic.com/shreddit/en-US/left-nav-topics-section-client-js-53532b58.js,https://www.redditstatic.com/shreddit/en-US/left-nav-client-js-1fb7de40.js,https://www.redditstatic.com/shreddit/en-US/hamburger-menu-client-js-397baae5.js,https://www.redditstatic.com/shreddit/en-US/deprecated-content-client-js-9e558f56.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/alert-controller-client-js-9e166874.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/share-menu-client-js-3e462a44.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/award-leaderboard-empty-banner-client-js-59c3c105.js,https://www.redditstatic.com/shreddit/en-US/award-leaderboard-locked-banner-client-js-9a629e1c.js,https://www.redditstatic.com/shreddit/en-US/award-leaderboard-client-js-c37befc5.js,https://www.redditstatic.com/shreddit/en-US/award-dialog-client-js-9e5a5efe.js,https://www.redditstatic.com/shreddit/award-dialog-client-css-8f21c736.css\"",
+              "https://www.redditstatic.com/shreddit/en-US/explainer-dialog-client-js-9c11dd95.js,https://www.redditstatic.com/shreddit/explainer-dialog-client-css-83f5bb40.css\""
+            ],
+            "scraped_at": "2025-07-15T09:53:44.405Z"
+          }
+        },
+        "score": 7,
+        "reason": "The discussion revolves around custom software development companies, suggesting interest from SaaS business owners who may need development services."
+      },
+      {
+        "source": {
+          "title": "To all the Saas business owners ! : r/SaaS",
+          "url": "https://www.reddit.com/r/SaaS/comments/bzx5w6/to_all_the_saas_business_owners/",
+          "snippet": "I wanted to avoid this route so I went looking for custom software development companies. Obviously going down this route means more money ..."
+        },
+        "leadInfo": {
+          "company": "SaaS Business Owners Community",
+          "contact_info": {
+            "emails": [],
+            "phones": [],
+            "website": "https://www.reddit.com/r/SaaS/comments/bzx5w6/to_all_the_saas_business_owners/",
+            "linkedin": null,
+            "social": []
+          },
+          "key_people": [
+            {
+              "name": "tdowlow",
+              "title": "SaaS Business Owner",
+              "email": null,
+              "linkedin": null
+            },
+            {
+              "name": "prnrathod81",
+              "title": "SaaS Business Owner",
+              "email": null,
+              "linkedin": null
+            },
+            {
+              "name": "xaksis",
+              "title": "SaaS Business Owner",
+              "email": null,
+              "linkedin": null
+            }
+          ],
+          "business_info": {
+            "industry": "Software as a Service (SaaS)",
+            "size": "Small to Medium (estimated based on community context)",
+            "location": "United States (inferred from Reddit user base)",
+            "funding": "Not specified",
+            "stage": "Startup/Growth (inferred from discussions)"
+          },
+          "pain_points": [
+            "Finding quality leads",
+            "Effective marketing channels",
+            "Competition in the SaaS market",
+            "Struggles with initial traction and growth"
+          ],
+          "buying_signals": [
+            "Running a product launch campaign for Free Invoicing Software",
+            "Seeking suggestions for lead generation"
+          ],
+          "lead_score": "6",
+          "pitch_angle": "Offer targeted digital marketing solutions to help SaaS businesses generate quality leads and improve their marketing strategies.",
+          "raw_data": {
+            "platform": "reddit",
+            "title": "To all the Saas business owners ! : r/SaaS",
+            "meta": {
+              "description": "",
+              "keywords": ""
+            },
+            "all_emails": [],
+            "all_phones": [],
+            "all_linkedin": [],
+            "all_websites": [
+              "https://www.redditstatic.com/shreddit/en-US/left-nav-resources-section-client-js-ecd15a88.js,https://www.redditstatic.com/shreddit/en-US/left-nav-topics-section-client-js-53532b58.js,https://www.redditstatic.com/shreddit/en-US/left-nav-client-js-1fb7de40.js,https://www.redditstatic.com/shreddit/en-US/hamburger-menu-client-js-397baae5.js,https://www.redditstatic.com/shreddit/en-US/deprecated-content-client-js-9e558f56.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/alert-controller-client-js-9e166874.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/share-menu-client-js-3e462a44.js\"",
+              "https://www.redditstatic.com/shreddit/en-US/award-leaderboard-empty-banner-client-js-59c3c105.js,https://www.redditstatic.com/shreddit/en-US/award-leaderboard-locked-banner-client-js-9a629e1c.js,https://www.redditstatic.com/shreddit/en-US/award-leaderboard-client-js-c37befc5.js,https://www.redditstatic.com/shreddit/en-US/award-dialog-client-js-9e5a5efe.js,https://www.redditstatic.com/shreddit/award-dialog-client-css-8f21c736.css\"",
+              "https://www.redditstatic.com/shreddit/en-US/explainer-dialog-client-js-9c11dd95.js,https://www.redditstatic.com/shreddit/explainer-dialog-client-css-83f5bb40.css\""
+            ],
+            "scraped_at": "2025-07-15T09:53:50.098Z"
           }
         },
         "score": 4,
